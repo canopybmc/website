@@ -1,0 +1,32 @@
+{
+  "title": "Open Firmware, Open Future",
+  "subtitle": {
+    "text": "Canopy is an open-source firmware platform that prioritizes security, transparency, and developer experience. Build on top of <a href=\"https://www.github.com/openbmc/openbmc\">openBMC</a>."
+  },
+  "primaryButton": {
+    "text": "Get Started",
+    "url": "/docs"
+  },
+  "secondaryButton": {
+    "text": "View on GitHub",
+    "url": "https://github.com/canopybmc"
+  },
+  "layers": [
+    {
+      "name": "Application",
+      "class": "layer-1"
+    },
+    {
+      "name": "Kernel",
+      "class": "layer-2"
+    },
+    {
+      "name": "Bootloader",
+      "class": "layer-3"
+    },
+    {
+      "name": "Hardware",
+      "class": "layer-4"
+    }
+  ]
+}

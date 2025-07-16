@@ -1,0 +1,29 @@
+{
+  "title": "Why Canopy?",
+  "items": [
+    {
+      "title": "Security",
+      "description": "Built with security-first principles. Verified boot chains, cryptographic signatures, and transparent security practices protect your devices from threats."
+    },
+    {
+      "title": "Developer-first",
+      "description": "Modern tooling, comprehensive documentation, and intuitive APIs make firmware development productive and enjoyable for developers at every level."
+    },
+    {
+      "title": "Transparency",
+      "description": "Every component is open source and auditable. No black boxes, no hidden backdoors. You can verify exactly what's running on your hardware."
+    },
+    {
+      "title": "Six month release cycle",
+      "description": "Canopy sticks to a fixed release cycle. No matter what."
+    },
+    {
+      "title": "Pre-build Binaries",
+      "description": "Canopy provides pre-build binaries for a variaty of supported hardware. Easy to get started - flash it and you're ready to go"
+    },
+    {
+      "title": "Hardware CI",
+      "description": "Canopy does more. We test every commit on real hardware, providing rock-solid stability."
+    }
+  ]
+}

@@ -301,6 +301,12 @@ a:hover {
   color: var(--primary);
 }
 
+.feature-icon object,
+.feature-icon img {
+  color: var(--primary);
+  filter: brightness(0) saturate(100%) invert(25%) sepia(91%) saturate(1584%) hue-rotate(264deg) brightness(96%) contrast(92%);
+}
+
 .feature-card h3 {
   color: var(--text);
   margin-bottom: 1rem;
