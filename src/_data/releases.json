@@ -1,0 +1,11 @@
+{
+  "current": null,
+  "upcoming": {
+    "version": "1.0.0",
+    "codename": "Pioneer",
+    "status": "In Development",
+    "target_date": "2024-Q2",
+    "description": "First official release of Canopy with core BMC functionality"
+  },
+  "items": []
+}

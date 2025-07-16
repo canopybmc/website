@@ -20,9 +20,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
                     {{ hero.secondaryButton.text }}
                 </a>
             </div>
-        </div>
-        
-        <div class="hero-visual">
+        </div><div class="hero-visual">
             <div class="hero-graphic">
                 <div class="firmware-layers">
                     {%- for layer in hero.layers -%}

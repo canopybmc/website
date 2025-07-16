@@ -529,6 +529,61 @@ a:hover {
   display: none;
 }
 
+/* Releases Page Styling */
+.releases-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--light-gray) 100%);
+  border: 2px solid var(--secondary);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: var(--shadow-md);
+}
+
+.releases-notice .notice-icon {
+  flex-shrink: 0;
+  color: var(--primary);
+}
+
+.releases-notice .notice-icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.releases-notice .notice-content {
+  flex: 1;
+}
+
+.releases-notice .notice-content h2 {
+  color: var(--primary);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.releases-notice .notice-content p {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.releases-notice .notice-content p:last-child {
+  margin-bottom: 0;
+}
+
+.releases-notice .notice-content a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.releases-notice .notice-content a:hover {
+  color: var(--secondary);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-container {
@@ -577,6 +632,16 @@ a:hover {
   .content-page table th,
   .content-page table td {
     padding: 0.75rem 0.5rem;
+  }
+  
+  .releases-notice {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .releases-notice .notice-icon {
+    align-self: center;
   }
   
   h1 { font-size: 2rem; }
