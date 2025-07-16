@@ -1,0 +1,13 @@
+{
+  "name": "canopy-website",
+  "version": "1.0.0",
+  "description": "Static website for Canopy project",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
+}

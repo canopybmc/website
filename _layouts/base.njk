@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} | {% endif %}Canopy</title>
+    <meta name="description" content="{{ description or 'Open Firmware, Open Future' }}">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/canopy.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="/" class="logo">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="#6C4AB6"/>
+                            <path d="M8 24V8h4v12l8-8v4l-8 8h8v4H8z" fill="#EFFFFD"/>
+                        </svg>
+                        <span>Canopy</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="/" class="nav-link">Home</a></li>
+                        <li><a href="/features" class="nav-link">Features</a></li>
+                        <li><a href="/releases" class="nav-link">Releases</a></li>
+                        <li><a href="/governance" class="nav-link">Governance</a></li>
+                        <li><a href="/docs" class="nav-link">Docs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Canopy</h4>
+                    <p>Open Firmware, Open Future</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="https://github.com/canopy-project" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="/docs">Documentation</a></li>
+                        <li><a href="/releases">Releases</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#" target="_blank" rel="noopener">Discussions</a></li>
+                        <li><a href="#" target="_blank" rel="noopener">Issues</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Canopy Project. Open source firmware for everyone.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
