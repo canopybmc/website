@@ -27,7 +27,7 @@ description: "Download the latest Canopy firmware releases and view release note
 
 When releases become available, you'll find:
 
-- **Pre-built binaries** for supported hardware platforms
+- **Pre-built binaries** for all [supported boards](/boards) (built automatically via GitHub Actions)
 - **Release notes** with detailed changelog and upgrade instructions
 - **Source code** packages for building from source
 - **Documentation** specific to each release version
@@ -37,7 +37,7 @@ When releases become available, you'll find:
 
 ## Supported Hardware
 
-Canopy will initially support a variety of server and embedded hardware platforms. Check back here for the complete list of supported devices and download links for each platform.
+Canopy will initially support a variety of server and embedded hardware platforms. See our [supported boards page](/boards) for the complete list of validated devices with feature matrices and validation status.
 
 ---
 

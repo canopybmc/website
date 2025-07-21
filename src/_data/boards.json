@@ -1,0 +1,47 @@
+{
+  "title": "Supported Boards",
+  "description": "Hardware platforms validated and supported by Canopy firmware",
+  "github_repo": "https://github.com/canopybmc/openbmc",
+  "boards": [
+    {
+      "name": "ARM Fixed Virtual Platform",
+      "model": "fvp",
+      "vendor": "ARM",
+      "validation": {
+        "commit": "ghi789jkl012",
+        "date": "2024-01-18",
+        "status": "validated"
+      }
+    },
+    {
+      "name": "AST2500 EVB",
+      "model": "evb-ast2500",
+      "vendor": "Aspeed",
+      "validation": {
+        "commit": "abc123def456",
+        "date": "2024-01-20",
+        "status": "validated"
+      }
+    },
+    {
+      "name": "AST2600 EVB",
+      "model": "evb-ast2600",
+      "vendor": "Aspeed",
+      "validation": {
+        "commit": "def456ghi789",
+        "date": "2024-01-22",
+        "status": "validated"
+      }
+    },
+    {
+      "name": "Tioga Pass",
+      "model": "tiogapass",
+      "vendor": "Wiwynn",
+      "validation": {
+        "commit": "abc123def456",
+        "date": "2024-01-15",
+        "status": "validated"
+      }
+    }
+  ]
+}
