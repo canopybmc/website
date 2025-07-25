@@ -22,10 +22,13 @@ description: "Canopy is an open-source firmware platform focused on security, tr
             </div>
         </div><div class="hero-visual">
             <div class="hero-graphic">
-                <div class="firmware-layers">
-                    {%- for layer in hero.layers -%}
-                    <div class="layer {{ layer.class }}">{{ layer.name }}</div>
-                    {%- endfor -%}
+                <div class="philosophy-diagram">
+                    <div class="core {{ hero.core.class }}">{{ hero.core.name }}</div>
+                    <div class="philosophy-layers">
+                        {%- for layer in hero.philosophyLayers -%}
+                        <div class="{{ layer.class }}">{{ layer.name }}</div>
+                        {%- endfor -%}
+                    </div>
                 </div>
             </div>
         </div>

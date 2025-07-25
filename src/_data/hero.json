@@ -11,22 +11,26 @@
     "text": "View on GitHub",
     "url": "https://github.com/canopybmc"
   },
-  "layers": [
+  "core": {
+    "name": "OpenBMC",
+    "class": "core-center"
+  },
+  "philosophyLayers": [
     {
-      "name": "Application",
-      "class": "layer-1"
+      "name": "Enablement",
+      "class": "philosophy-layer developer-layer"
     },
     {
-      "name": "Kernel",
-      "class": "layer-2"
+      "name": "Testing",
+      "class": "philosophy-layer testing-layer"
     },
     {
-      "name": "Bootloader",
-      "class": "layer-3"
+      "name": "Stability",
+      "class": "philosophy-layer stability-layer"
     },
     {
-      "name": "Hardware",
-      "class": "layer-4"
+      "name": "Open Source",
+      "class": "philosophy-layer opensource-layer"
     }
   ]
 }
