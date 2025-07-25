@@ -369,6 +369,31 @@ a:hover {
   color: var(--neutral);
 }
 
+.footer-bottom p {
+  margin-bottom: 0.5rem;
+}
+
+.footer-bottom p:last-child {
+  margin-bottom: 0;
+}
+
+.sponsorship {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.sponsorship a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.sponsorship a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 /* Content Pages Styling */
 .content-page {
   max-width: 800px;
@@ -852,4 +877,384 @@ a:hover {
   
   h1 { font-size: 2rem; }
   h2 { font-size: 1.75rem; }
+}
+
+/* Philosophy Page Specific Styles */
+.approach-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 2rem !important;
+  margin: 2rem 0 !important;
+  width: 100% !important;
+}
+
+.approach-card {
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  display: block;
+  width: 100%;
+}
+
+.approach-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.approach-card.stability {
+  border-color: var(--primary);
+}
+
+.approach-card.stability:hover {
+  border-color: var(--primary);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--light-gray) 100%);
+}
+
+.approach-card.innovation {
+  border-color: var(--secondary);
+}
+
+.approach-card.innovation:hover {
+  border-color: var(--secondary);
+  background: linear-gradient(135deg, var(--light-gray) 0%, var(--accent) 100%);
+}
+
+.approach-icon {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.approach-card.innovation .approach-icon {
+  color: var(--secondary);
+}
+
+.approach-card h3 {
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.approach-card ul {
+  text-align: left;
+  margin: 0;
+  padding-left: 0;
+}
+
+.approach-card ul li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.approach-card ul li::before {
+  content: "✓";
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.approach-card.innovation ul li::before {
+  color: var(--secondary);
+}
+
+.benefits-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.benefit-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.benefit-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--secondary);
+}
+
+.benefit-item h4 {
+  margin-bottom: 0.75rem;
+  color: var(--text);
+  font-size: 1.1rem;
+}
+
+.benefit-item p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.release-timeline {
+  max-width: 800px;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.release-timeline::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 50%, var(--primary) 100%);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.timeline-marker {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--white);
+  font-size: 0.8rem;
+}
+
+.timeline-marker.daily {
+  background: var(--secondary);
+}
+
+.timeline-marker.daily::after {
+  content: 'D';
+}
+
+.timeline-marker.stable {
+  background: var(--primary);
+}
+
+.timeline-marker.stable::after {
+  content: 'S';
+}
+
+.timeline-marker.lts {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+}
+
+.timeline-marker.lts::after {
+  content: 'LTS';
+  font-size: 0.6rem;
+}
+
+.timeline-content {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  flex: 1;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--secondary);
+}
+
+.timeline-content h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: var(--primary);
+  font-size: 1.2rem;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #4a5568;
+}
+
+.enterprise-needs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+  padding-left: 0;
+}
+
+.enterprise-needs li {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  list-style: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.enterprise-needs li:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--secondary);
+}
+
+.enterprise-needs li::before {
+  content: "🏢";
+  display: inline-block;
+  margin-right: 0.75rem;
+  font-size: 1.2em;
+}
+
+.enterprise-needs li strong {
+  color: var(--primary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.developer-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.developer-feature {
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.developer-feature:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.developer-feature .feature-icon {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.developer-feature h4 {
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-size: 1.2rem;
+}
+
+.developer-feature p {
+  margin: 0;
+  color: #4a5568;
+  text-align: left;
+}
+
+.developer-benefits {
+  background: linear-gradient(135deg, var(--light-gray) 0%, var(--accent) 100%);
+  border: 2px solid var(--primary);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: var(--shadow-md);
+}
+
+.developer-benefits h4 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.developer-benefits ul {
+  margin: 0;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.developer-benefits ul li {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  list-style: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.developer-benefits ul li:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--secondary);
+}
+
+.developer-benefits ul li::before {
+  content: "💻";
+  display: inline-block;
+  margin-right: 0.75rem;
+  font-size: 1.2em;
+}
+
+.developer-benefits ul li strong {
+  color: var(--primary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Philosophy page mobile responsiveness */
+@media (max-width: 768px) {
+  .approach-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .benefits-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .timeline-item {
+    gap: 1rem;
+  }
+  
+  .timeline-marker {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .timeline-marker.lts::after {
+    font-size: 0.5rem;
+  }
+  
+  .release-timeline::before {
+    left: 16px;
+  }
+  
+  .enterprise-needs {
+    grid-template-columns: 1fr;
+  }
+  
+  .developer-features {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .developer-benefits ul {
+    grid-template-columns: 1fr;
+  }
 }
