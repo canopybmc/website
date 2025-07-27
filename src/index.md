@@ -2,7 +2,10 @@
 layout: base.njk
 title: "Open Firmware, Open Future"
 description: "Canopy is an open-source firmware platform focused on security, transparency, and developer experience."
+templateEngineOverride: njk,md
 ---
+
+{% from "FeatureCard.njk" import featureCard %}
 
 <section class="hero">
     <div class="hero-container">
@@ -40,18 +43,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
         <h2 class="section-title">{{ features.title }}</h2>
         <div class="features-grid">
             {%- for feature in features.items -%}
-            <div class="feature-card">
-                <div class="feature-icon">
-                    {%- assign icon_filename = feature.title | downcase | replace: " ", "-" -%}
-                    <object data="/assets/icons/{{ icon_filename }}.svg" type="image/svg+xml" width="48" height="48" aria-label="{{ feature.title }} icon">
-                        <img src="/assets/icons/{{ icon_filename }}.svg" alt="{{ feature.title }}" width="48" height="48">
-                    </object>
-                </div>
-                <h3>{{ feature.title }}</h3>
-                <p>
-                    {{ feature.description }}
-                </p>
-            </div>
+            {{ featureCard(feature.title, feature.description) }}
             {%- endfor -%}
         </div>
     </div>

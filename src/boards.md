@@ -2,7 +2,10 @@
 layout: base.njk
 title: "Supported Boards"
 description: "Hardware platforms validated and supported by Canopy firmware with feature matrix and validation status."
+templateEngineOverride: njk,md
 ---
+
+{% from "BoardItem.njk" import boardItem %}
 
 <div class="content-page">
 
@@ -37,7 +40,7 @@ The following boards are currently supported by Canopy firmware:
                 <td class="validation-status">
                     {%- if board.validation.status == "validated" -%}
                     <span class="status-validated">✓ Validated</span>
-                    {%- elsif board.validation.status == "in_progress" -%}
+                    {%- elif board.validation.status == "in_progress" -%}
                     <span class="status-in-progress">⏳ In Progress</span>
                     {%- else -%}
                     <span class="status-pending">⏸ Pending</span>
@@ -49,7 +52,7 @@ The following boards are currently supported by Canopy firmware:
                        target="_blank" 
                        rel="noopener"
                        class="commit-link">
-                        <code>{{ board.validation.commit | slice: 0, 7 }}</code>
+                        <code>{{ board.validation.commit | slice(0, 7) }}</code>
                     </a>
                 </td>
             </tr>
@@ -68,10 +71,10 @@ Pre-built firmware binaries are automatically generated for all validated boards
     {%- for board in boards.boards -%}
     {%- if board.validation.status == "validated" -%}
     <div class="download-card">
-        <h4>{{ board.name }}</h4>
+        {{ boardItem(board.name, board.validation.status) }}
         <p class="board-model">{{ board.model }}</p>
         <div class="download-links">
-            <a href="https://github.com/canopybmc/openbmc/releases/latest/download/{{ board.model | downcase | replace: " ", "-" }}-firmware.bin" 
+            <a href="https://github.com/canopybmc/openbmc/releases/latest/download/{{ board.model | lower | replace(" ", "-") }}-firmware.bin"
                class="download-btn"
                target="_blank" 
                rel="noopener">
@@ -82,7 +85,7 @@ Pre-built firmware binaries are automatically generated for all validated boards
             <small>
                 Validated: {{ board.validation.date }} |
                 <a href="{{ boards.github_repo }}/commit/{{ board.validation.commit }}" target="_blank" rel="noopener">
-                    Commit {{ board.validation.commit | slice: 0, 7 }}
+                    Commit {{ board.validation.commit | slice(0, 7) }}
                 </a>
             </small>
         </p>

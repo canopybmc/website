@@ -1,0 +1,15 @@
+{% macro boardItem(name, status, image) %}
+    {% set status_class = 'status-' + status %}
+    {% set status_label = status | replace('_', ' ') | capitalize %}
+    <div class="board-item">
+        {% if image %}
+        <div class="board-image">
+            <img src="{{ image }}" alt="{{ name }}">
+        </div>
+        {% endif %}
+        <div class="board-details">
+            <span class="board-name">{{ name }}</span>
+            <span class="status-badge {{ status_class }}">{{ status_label }}</span>
+        </div>
+    </div>
+{% endmacro %}

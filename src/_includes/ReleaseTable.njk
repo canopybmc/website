@@ -1,0 +1,35 @@
+{% macro releaseTable(releases) %}
+    {% if releases %}
+    <table class="release-table">
+        <thead>
+            <tr>
+                <th>Version</th>
+                <th>Codename</th>
+                <th>Status</th>
+                <th>Date/Target</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if releases.upcoming %}
+            <tr class="release-upcoming">
+                <td>{{ releases.upcoming.version }}</td>
+                <td>{{ releases.upcoming.codename }}</td>
+                <td>{{ releases.upcoming.status }}</td>
+                <td>{{ releases.upcoming.target_date }}</td>
+                <td>{{ releases.upcoming.description }}</td>
+            </tr>
+            {% endif %}
+            {% for rel in releases.items %}
+            <tr>
+                <td>{{ rel.version }}</td>
+                <td>{{ rel.codename }}</td>
+                <td>Released</td>
+                <td>{{ rel.date }}</td>
+                <td>{{ rel.description }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+{% endmacro %}

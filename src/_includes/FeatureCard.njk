@@ -1,0 +1,14 @@
+{% macro featureCard(title, text, icon) %}
+    {% set icon_filename = icon or title | lower | replace(' ', '-') %}
+    <div class="feature-card">
+        {% if icon_filename %}
+        <div class="feature-icon">
+            <object data="/assets/icons/{{ icon_filename }}.svg" type="image/svg+xml" width="48" height="48" aria-label="{{ title }} icon">
+                <img src="/assets/icons/{{ icon_filename }}.svg" alt="{{ title }}" width="48" height="48">
+            </object>
+        </div>
+        {% endif %}
+        <h3>{{ title }}</h3>
+        <p>{{ text }}</p>
+    </div>
+{% endmacro %}

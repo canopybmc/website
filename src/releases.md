@@ -2,11 +2,16 @@
 layout: base.njk
 title: "Releases"
 description: "Download the latest Canopy firmware releases and view release notes for all versions."
+templateEngineOverride: njk,md
 ---
+
+{% from "ReleaseTable.njk" import releaseTable %}
 
 <div class="content-page">
 
 # Releases
+
+{{ releaseTable(releases) }}
 
 <div class="releases-notice">
     <div class="notice-icon">
