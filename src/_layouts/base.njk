@@ -33,12 +33,12 @@
                 
                 <div class="nav-menu">
                     <ul class="nav-links">
-                        <li><a href="/" class="nav-link">Home</a></li>
-                        <li><a href="/philosophy" class="nav-link">Philosophy</a></li>
+                        <li><a href="/" class="nav-link{% if page.url == "/" %} active{% endif %}">Home</a></li>
+                        <li><a href="/philosophy" class="nav-link{% if page.url == "/philosophy/" %} active{% endif %}">Philosophy</a></li>
 			<!--                        <li><a href="/features" class="nav-link">Features</a></li> -->
-                        <li><a href="/boards" class="nav-link">Boards</a></li>
-                        <li><a href="/releases" class="nav-link">Releases</a></li>
-                        <li><a href="/governance" class="nav-link">Governance</a></li>
+                        <li><a href="/boards" class="nav-link{% if page.url == "/boards/" %} active{% endif %}">Boards</a></li>
+                        <li><a href="/releases" class="nav-link{% if page.url == "/releases/" %} active{% endif %}">Releases</a></li>
+                        <li><a href="/governance" class="nav-link{% if page.url == "/governance/" %} active{% endif %}">Governance</a></li>
 <!--			<li><a href="/docs" class="nav-link">Docs</a></li> -->
                     </ul>
                 </div>
