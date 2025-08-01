@@ -1,11 +1,31 @@
 {
-  "current": null,
+  "current": {
+    "version": "2025.08-beta1",
+    "codename": "Pioneer Beta",
+    "status": "Beta Release",
+    "release_date": "2025-08-01",
+    "commit": "74663d9",
+    "github_url": "https://github.com/canopybmc/openbmc/releases/tag/2025.08-beta1",
+    "description": "First beta release of Canopy with core BMC functionality",
+    "validation_status": "not_validated"
+  },
   "upcoming": {
-    "version": "1.0.0",
+    "version": "2025.08-stable",
     "codename": "Pioneer",
     "status": "In Development",
-    "target_date": "2024-Q2",
-    "description": "First official release of Canopy with core BMC functionality"
+    "target_date": "2025-Q4",
+    "description": "First stable release of Canopy with validated hardware support"
   },
-  "items": []
+  "items": [
+    {
+      "version": "2025.08-beta1",
+      "codename": "Pioneer Beta",
+      "status": "Beta Release",
+      "release_date": "2025-08-01",
+      "commit": "74663d9",
+      "github_url": "https://github.com/canopybmc/openbmc/releases/tag/2025.08-beta1",
+      "description": "First beta release of Canopy with core BMC functionality",
+      "validation_status": "not_validated"
+    }
+  ]
 }

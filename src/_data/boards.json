@@ -8,9 +8,9 @@
       "model": "fvp",
       "vendor": "ARM",
       "validation": {
-        "commit": "ghi789jkl012",
-        "date": "2024-01-18",
-        "status": "validated"
+        "commit": "74663d9",
+        "date": "2025-08-01",
+        "status": "not_validated"
       }
     },
     {
@@ -18,9 +18,9 @@
       "model": "evb-ast2500",
       "vendor": "Aspeed",
       "validation": {
-        "commit": "abc123def456",
-        "date": "2024-01-20",
-        "status": "validated"
+        "commit": "74663d9",
+        "date": "2025-08-01",
+        "status": "not_validated"
       }
     },
     {
@@ -28,9 +28,9 @@
       "model": "evb-ast2600",
       "vendor": "Aspeed",
       "validation": {
-        "commit": "def456ghi789",
-        "date": "2024-01-22",
-        "status": "validated"
+        "commit": "74663d9",
+        "date": "2025-08-01",
+        "status": "not_validated"
       }
     },
     {
@@ -38,9 +38,9 @@
       "model": "tiogapass",
       "vendor": "Wiwynn",
       "validation": {
-        "commit": "abc123def456",
-        "date": "2024-01-15",
-        "status": "validated"
+        "commit": "74663d9",
+        "date": "2025-08-01",
+        "status": "not_validated"
       }
     }
   ]

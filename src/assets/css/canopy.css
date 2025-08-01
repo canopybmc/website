@@ -744,6 +744,168 @@ a:hover {
 }
 
 /* Releases Page Styling */
+.release-card {
+  background: var(--white);
+  border: 2px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin: 2rem 0;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.release-card:hover {
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.current-release {
+  border-color: var(--primary);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--light-gray) 100%);
+  border-width: 3px;
+}
+
+.release-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.release-header h3, 
+.release-header h4 {
+  margin: 0;
+  color: var(--text);
+  flex: 1;
+}
+
+.release-status {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.status-beta-release {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: var(--white);
+}
+
+.status-stable {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: var(--white);
+}
+
+.status-in-development {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+  color: var(--white);
+}
+
+.release-info {
+  margin-bottom: 2rem;
+}
+
+.release-description {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.release-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--light-gray);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border);
+}
+
+.release-meta span {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.release-date {
+  font-weight: 600;
+}
+
+.commit-info a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.commit-info a:hover {
+  color: var(--primary);
+}
+
+.commit-info code {
+  background: var(--white);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  border: 1px solid var(--border);
+}
+
+.validation-status {
+  font-weight: 600;
+}
+
+.release-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.release-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+  font-family: var(--font-body);
+}
+
+.release-btn.primary {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.release-btn.primary:hover {
+  background: #5a3d9a;
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.release-btn.secondary {
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.release-btn.secondary:hover {
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.release-history {
+  margin: 2rem 0;
+}
+
 .releases-notice {
   display: flex;
   align-items: flex-start;
