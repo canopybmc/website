@@ -39,6 +39,8 @@ The following boards are currently supported by Canopy firmware:
                     <span class="status-validated">✓ Validated</span>
                     {%- elsif board.validation.status == "in_progress" -%}
                     <span class="status-in-progress">⏳ In Progress</span>
+                    {%- elsif board.validation.status == "not_validated" -%}
+                    <span class="status-not-validated">❌ Not Validated</span>
                     {%- else -%}
                     <span class="status-pending">⏸ Pending</span>
                     {%- endif -%}

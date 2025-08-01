@@ -2,12 +2,43 @@
 layout: base.njk
 title: "Releases"
 description: "Download the latest Canopy firmware releases and view release notes for all versions."
+templateEngineOverride: njk,md
 ---
 
 <div class="content-page">
 
 # Releases
 
+## Current Release
+
+{% if releases.current %}
+<div class="release-card current-release">
+    <div class="release-header">
+        <h3>{{ releases.current.version }} - {{ releases.current.codename }}</h3>
+        <span class="release-status status-{{ releases.current.status | lower | replace(' ', '-') }}">{{ releases.current.status }}</span>
+    </div>
+    <div class="release-info">
+        <p class="release-description">{{ releases.current.description }}</p>
+        <div class="release-meta">
+            <span class="release-date">Released: {{ releases.current.release_date }}</span>
+            <span class="commit-info">
+                Commit: <a href="https://github.com/canopybmc/openbmc/commit/{{ releases.current.commit }}" target="_blank" rel="noopener">
+                    <code>{{ releases.current.commit }}</code>
+                </a>
+            </span>
+            <span class="validation-status">{% if releases.current.validation_status == "validated" %}✓ Validated{% elif releases.current.validation_status == "not_validated" %}❌ Not Validated{% else %}⏳ Validation In Progress{% endif %}</span>
+        </div>
+        <div class="release-actions">
+            <a href="{{ releases.current.github_url }}" class="release-btn primary" target="_blank" rel="noopener">
+                📦 Download Release
+            </a>
+            <a href="/boards" class="release-btn secondary">
+                🔍 View Supported Boards
+            </a>
+        </div>
+    </div>
+</div>
+{% else %}
 <div class="releases-notice">
     <div class="notice-icon">
         <svg width="48" height="48" fill="currentColor" viewBox="0 0 24 24">
@@ -20,6 +51,43 @@ description: "Download the latest Canopy firmware releases and view release note
         <p>Follow our progress on <a href="https://github.com/canopybmc" target="_blank" rel="noopener">GitHub</a> or join our community discussions to be notified when the first release is available.</p>
     </div>
 </div>
+{% endif %}
+
+---
+
+## Release History
+
+{% if releases.items and releases.items.length > 0 %}
+
+<div class="release-history">
+{% for release in releases.items %}
+<div class="release-card">
+    <div class="release-header">
+        <h4>{{ release.version }} - {{ release.codename }}</h4>
+        <span class="release-status status-{{ release.status | lower | replace(' ', '-') }}">{{ release.status }}</span>
+    </div>
+    <div class="release-info">
+        <p class="release-description">{{ release.description }}</p>
+        <div class="release-meta">
+            <span class="release-date">Released: {{ release.release_date }}</span>
+            <span class="commit-info">
+                Commit: <a href="https://github.com/canopybmc/openbmc/commit/{{ release.commit }}" target="_blank" rel="noopener">
+                    <code>{{ release.commit }}</code>
+                </a>
+            </span>
+            <span class="validation-status">{% if release.validation_status == "validated" %}✓ Validated{% elif release.validation_status == "not_validated" %}❌ Not Validated{% else %}⏳ Validation In Progress{% endif %}</span>
+        </div>
+        <div class="release-actions">
+            <a href="{{ release.github_url }}" class="release-btn primary" target="_blank" rel="noopener">
+                📦 View Release
+            </a>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</div>
+
+{% endif %}
 
 ---
 
