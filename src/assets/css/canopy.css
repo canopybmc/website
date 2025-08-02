@@ -491,10 +491,9 @@ a:hover {
   color: var(--primary);
 }
 
-.feature-icon object,
 .feature-icon img {
-  color: var(--primary);
-  filter: brightness(0) saturate(100%) invert(25%) sepia(91%) saturate(1584%) hue-rotate(264deg) brightness(96%) contrast(92%);
+  /* SVG icons now have the correct color (#6C4AB6) built-in */
+  /* No CSS filters needed - better performance and compatibility */
 }
 
 .feature-card h3 {
