@@ -3,27 +3,33 @@
   "items": [
     {
       "title": "Security",
-      "description": "Built with security-first principles. Verified boot chains, cryptographic signatures, and transparent security practices protect your devices from threats."
+      "description": "Built with security-first principles. Verified boot chains, cryptographic signatures, and transparent security practices protect your devices from threats.",
+      "altText": "Security features icon - Built with security-first principles"
     },
     {
       "title": "Developer-first",
-      "description": "Modern tooling, comprehensive documentation, and intuitive APIs make firmware development productive and enjoyable for developers at every level."
+      "description": "Modern tooling, comprehensive documentation, and intuitive APIs make firmware development productive and enjoyable for developers at every level.",
+      "altText": "Developer-first icon - Modern tooling and comprehensive documentation"
     },
     {
       "title": "Transparency",
-      "description": "Every component is open source and auditable. No black boxes, no hidden backdoors. You can verify exactly what's running on your hardware."
+      "description": "Every component is open source and auditable. No black boxes, no hidden backdoors. You can verify exactly what's running on your hardware.",
+      "altText": "Transparency icon - Open source and auditable components"
     },
     {
       "title": "Six month release cycle",
-      "description": "Canopy sticks to a fixed release cycle. No matter what."
+      "description": "Canopy sticks to a fixed release cycle. No matter what.",
+      "altText": "Six month release cycle icon - Fixed release schedule"
     },
     {
       "title": "Pre-build Binaries",
-      "description": "Canopy provides pre-build binaries for a variaty of supported hardware. Easy to get started - flash it and you're ready to go"
+      "description": "Canopy provides pre-build binaries for a variaty of supported hardware. Easy to get started - flash it and you're ready to go",
+      "altText": "Pre-build binaries icon - Ready-to-flash firmware for supported hardware"
     },
     {
       "title": "Hardware CI",
-      "description": "Canopy does more. We test every commit on real hardware, providing rock-solid stability."
+      "description": "Canopy does more. We test every commit on real hardware, providing rock-solid stability.",
+      "altText": "Hardware CI icon - Testing every commit on real hardware"
     }
   ]
 }
