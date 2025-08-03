@@ -43,7 +43,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
             <div class="feature-card">
                 <div class="feature-icon">
                     {%- assign icon_filename = feature.title | downcase | replace: " ", "-" -%}
-                    <img src="/assets/icons/{{ icon_filename }}.svg" alt="{{ feature.title }}" width="48" height="48">
+                    <img src="/assets/icons/{{ icon_filename }}.svg" alt="{{ feature.altText }}" width="48" height="48">
                 </div>
                 <h3>{{ feature.title }}</h3>
                 <p>
