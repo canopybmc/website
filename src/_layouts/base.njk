@@ -4,7 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if title %}{{ title }} | {% endif %}Canopy</title>
-    <meta name="description" content="{{ description or 'Open Firmware, Open Future' }}">
+    <meta name="description" content="{{ description or 'Canopy is an open-source BMC firmware platform focused on security, transparency, and developer experience. Built on openBMC.' }}">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}Canopy">
+    <meta property="og:description" content="{{ description or 'Open-source BMC firmware platform focused on security, transparency, and developer experience. Built on openBMC.' }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://canopybmc.org{{ page.url }}">
+    <meta property="og:image" content="https://canopybmc.org/assets/images/canopy-og.png">
+    <meta property="og:site_name" content="Canopy">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% if title %}{{ title }} | {% endif %}Canopy">
+    <meta name="twitter:description" content="{{ description or 'Open-source BMC firmware platform focused on security, transparency, and developer experience.' }}">
+    <meta name="twitter:image" content="https://canopybmc.org/assets/images/canopy-og.png">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="keywords" content="openBMC, BMC firmware, open source firmware, baseboard management controller, server firmware, security, transparency, developer tools{{ ', ' + keywords if keywords }}">
+    <meta name="author" content="Canopy Project">
+    <link rel="canonical" href="https://canopybmc.org{{ page.url }}">
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
@@ -16,6 +35,41 @@
     
     <!-- Styles -->
     <link rel="stylesheet" href="/assets/css/canopy.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Canopy",
+      "description": "Open-source BMC firmware platform focused on security, transparency, and developer experience. Built on openBMC foundation.",
+      "url": "https://canopybmc.org",
+      "applicationCategory": "SystemApplication",
+      "operatingSystem": "Linux",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Canopy Project",
+        "url": "https://canopybmc.org"
+      },
+      "maintainer": {
+        "@type": "Organization",
+        "name": "9elements",
+        "url": "https://9elements.com"
+      },
+      "codeRepository": "https://github.com/canopybmc",
+      "programmingLanguage": ["C", "Python", "Shell"],
+      "license": "https://opensource.org/licenses/Apache-2.0",
+      "keywords": ["openBMC", "BMC firmware", "open source", "security", "transparency", "developer tools"],
+      "releaseNotes": "https://canopybmc.org/releases",
+      "softwareHelp": "https://github.com/canopybmc",
+      "isAccessibleForFree": true
+    }
+    </script>
 </head>
 <body>
     <header class="site-header">
@@ -70,6 +124,7 @@
                         <li><a href="https://github.com/canopybmc" target="_blank" rel="noopener">Canopy GitHub Repository</a></li>
 			<!-- <li><a href="/docs">Documentation</a></li> -->
                         <li><a href="/releases">Releases</a></li>
+                        <li><a href="/sitemap.xml">Sitemap</a></li>
                     </ul>
                 </div>
                 

@@ -1,0 +1,17 @@
+#!/bin/sh
+# Pre-commit hook to run linting
+
+echo "Running linter before commit..."
+
+# Run linter
+npm run lint:check
+
+# If linting fails, prevent commit
+if [ $? -ne 0 ]; then
+  echo "Linting failed! Please fix the issues and try again."
+  echo "Run 'npm run lint' to automatically fix most issues."
+  exit 1
+fi
+
+echo "Linting passed!"
+exit 0

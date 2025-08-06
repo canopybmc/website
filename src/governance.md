@@ -18,13 +18,13 @@ The Canopy Council is the primary decision-making body for the project. It consi
 
 ### Roles and Responsibilities
 
-| Role                | Responsibilities                                                                 |
-|---------------------|----------------------------------------------------------------------------------|
-| Council Members     | Shape project direction, approve governance changes, resolve conflicts           |
-| Chairperson         | Facilitate meetings, manage voting processes, set agendas                        |
-| Technical Liaison   | Guide architecture, review release plans, assist board enablement strategies     |
-| Community Rep(s)    | Represent contributor voices, onboarding experience, and inclusiveness           |
-| Security Lead       | Coordinate CRA compliance, CVE handling, and security best practices              |
+| Role              | Responsibilities                                                             |
+| ----------------- | ---------------------------------------------------------------------------- |
+| Council Members   | Shape project direction, approve governance changes, resolve conflicts       |
+| Chairperson       | Facilitate meetings, manage voting processes, set agendas                    |
+| Technical Liaison | Guide architecture, review release plans, assist board enablement strategies |
+| Community Rep(s)  | Represent contributor voices, onboarding experience, and inclusiveness       |
+| Security Lead     | Coordinate CRA compliance, CVE handling, and security best practices         |
 
 The Council typically has **5 to 7 members**, with an odd number preferred to avoid voting ties.
 
@@ -79,4 +79,3 @@ We believe that **good governance creates great software**. Join us in shaping t
 ---
 
 </div>
-

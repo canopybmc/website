@@ -12,6 +12,7 @@ templateEngineOverride: njk,md
 ## Current Release
 
 {% if releases.current %}
+
 <div class="release-card current-release">
     <div class="release-header">
         <h3>{{ releases.current.version }} - {{ releases.current.codename }}</h3>

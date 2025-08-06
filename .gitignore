@@ -41,6 +41,10 @@ Thumbs.db
 .eleventy-cache/
 .sass-cache/
 
+# Claude
+CLAUDE.md
+.claude/
+
 # Package manager lockfiles (uncomment if you want to ignore them)
 # package-lock.json
 # yarn.lock

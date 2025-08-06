@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "description": "Static website for Canopy project",
   "scripts": {
-    "build": "eleventy",
+    "build": "npm run lint && eleventy",
+    "build:production": "eleventy",
     "serve": "eleventy --serve",
-    "start": "eleventy --serve"
+    "start": "eleventy --serve",
+    "lint": "prettier --write . && eslint . --fix",
+    "lint:check": "prettier --check . && eslint ."
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0"
+    "@11ty/eleventy": "^2.0.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.0.0"
   }
 }
