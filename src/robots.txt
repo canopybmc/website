@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://canopybmc.org/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Allow access to assets
+Allow: /assets/
+
+# Block access to private/build files if any exist in future
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.njk$

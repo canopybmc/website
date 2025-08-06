@@ -7,11 +7,13 @@ The name "Canopy" and the associated logo are registered trademarks of **9elemen
 ## Usage Guidelines
 
 ### Permitted Use
+
 - Reference to the Canopy project in documentation, articles, and educational materials
 - Use in context clearly identifying Canopy as a project by 9elements GmbH
 - Non-commercial use for community purposes and contributions
 
 ### Restrictions
+
 - Commercial use of the Canopy name or logo requires written permission from 9elements GmbH
 - The name and logo may not be used in a way that suggests endorsement without explicit permission
 - Modified versions of the logo or name are not permitted without authorization

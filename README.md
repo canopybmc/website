@@ -9,7 +9,7 @@ The official website for the Canopy open-source firmware project. Built with 11t
 ├── src/                    # Source files
 │   ├── _data/             # Global data files (JSON, JS)
 │   │   ├── features.json  # Feature cards data
-│   │   ├── hero.json      # Hero section data  
+│   │   ├── hero.json      # Hero section data
 │   │   └── releases.json  # Release information
 │   ├── _layouts/          # Template layouts (Nunjucks)
 │   │   └── base.njk       # Base layout template
@@ -78,16 +78,54 @@ The generated static files will be in the `_site/` directory.
 
 ### Available Scripts
 
-- `npm run build` - Build the site for production
-- `npm run dev` - Start development server with live reload
-- `npm run clean` - Clean the build output directory
+- `npm start` / `npm run serve` - Start development server with live reload
+- `npm run build` - Build site with automatic linting (recommended for development)
+- `npm run build:production` - Build site without linting (for CI/CD)
+- `npm run lint` - Run Prettier and ESLint with automatic fixes
+- `npm run lint:check` - Check formatting and linting without making changes
+
+### Code Quality
+
+This project uses:
+
+- **Prettier** for code formatting
+- **ESLint** for code linting
+- Automatic linting on build
+
+The linter will:
+
+- Remove trailing whitespace
+- Ensure newlines at end of files
+- Fix common formatting issues
+- Enforce consistent code style
+
+### SEO Features
+
+- ✅ Open Graph meta tags for social sharing
+- ✅ Twitter Card meta tags
+- ✅ JSON-LD structured data
+- ✅ Automatic sitemap.xml generation
+- ✅ robots.txt for search engines
+- ✅ Semantic HTML structure
+- ✅ Mobile-responsive design
+
+### Git Hooks (Optional)
+
+To enable automatic linting before commits:
+
+```bash
+# Set up git hooks directory
+git config core.hooksPath .githooks
+```
+
+This will run `npm run lint:check` before each commit and prevent commits with linting issues.
 
 ## Content Management
 
 ### Pages
 
 - **Homepage** (`src/index.md`): Hero section, feature cards, and call-to-action
-- **Governance** (`src/governance.md`): Project governance structure and processes  
+- **Governance** (`src/governance.md`): Project governance structure and processes
 - **Releases** (`src/releases.md`): Release information and download links
 
 ### Data-Driven Content
@@ -134,6 +172,7 @@ The website is automatically deployed through **Netlify** with the following con
 ### Environment
 
 The site is optimized for:
+
 - Modern browsers (ES6+ support)
 - Mobile-first responsive design
 - Fast loading with minimal JavaScript
@@ -158,6 +197,7 @@ This project is part of the Canopy open-source firmware project. Please refer to
 ## Support
 
 For issues or questions about the website:
+
 - Create an issue in the GitHub repository
 - Check the project documentation
 - Join the community discussions
