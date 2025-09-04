@@ -5,7 +5,7 @@
   },
   "primaryButton": {
     "text": "Get Started",
-    "url": "/docs"
+    "url": "https://github.com/canopybmc"
   },
   "secondaryButton": {
     "text": "View on GitHub",
