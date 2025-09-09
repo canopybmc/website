@@ -41,6 +41,10 @@ The following boards are currently supported by Canopy firmware:
                     <span class="status-in-progress">⏳ In Progress</span>
                     {%- elsif board.validation.status == "not_validated" -%}
                     <span class="status-not-validated">❌ Not Validated</span>
+                    {%- elsif board.validation.status == "failed" -%}
+                    <span class="status-failed">❌ Failed</span>
+                    {%- elsif board.validation.status == "deferred" -%}
+                    <span class="status-deferred">⏸ Deferred</span>
                     {%- else -%}
                     <span class="status-pending">⏸ Pending</span>
                     {%- endif -%}
@@ -73,12 +77,28 @@ Pre-built firmware binaries are automatically generated for all validated boards
         <h4>{{ board.name }}</h4>
         <p class="board-model">{{ board.model }}</p>
         <div class="download-links">
+            {%- if board.model == "evb-ast2500" -%}
+            <a href="https://github.com/canopybmc/openbmc/releases/download/2025.08/flash-evb-ast2500" 
+               class="download-btn"
+               target="_blank" 
+               rel="noopener">
+                📦 Download BMC Firmware
+            </a>
+            {%- elsif board.model == "evb-ast2600" -%}
+            <a href="https://github.com/canopybmc/openbmc/releases/download/2025.08/flash-evb-ast2600" 
+               class="download-btn"
+               target="_blank" 
+               rel="noopener">
+                📦 Download BMC Firmware
+            </a>
+            {%- else -%}
             <a href="https://github.com/canopybmc/openbmc/releases/latest/download/{{ board.model | downcase | replace: " ", "-" }}-firmware.bin" 
                class="download-btn"
                target="_blank" 
                rel="noopener">
                 📦 Download BMC Firmware
             </a>
+            {%- endif -%}
         </div>
         <p class="validation-info">
             <small>
