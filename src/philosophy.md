@@ -73,8 +73,8 @@ through a carefully balanced dual approach to release management and upstream in
 </div>
 <h3>Cutting-Edge Innovation</h3>
 <ul>
-<li><strong>Daily rebases</strong> to track OpenBMC upstream closely</li>
-<li><strong>Minimal testing</strong> on daily builds for rapid feedback</li>
+<li><strong>Weekly rebases</strong> to track OpenBMC upstream closely</li>
+<li><strong>Full testing</strong> on weekly builds for rapid feedback</li>
 <li><strong>Latest features</strong> from the OpenBMC community</li>
 <li><strong>Continuous integration</strong> with upstream developments</li>
 </ul>
@@ -101,7 +101,7 @@ This dual approach means Canopy users benefit from:
 
 <div class="benefit-item">
 <h4>🔄 Flexible Deployment Options</h4>
-<p>Choose between stable releases for production or daily builds for development and testing.</p>
+<p>Choose between stable releases for production or weekly builds for development and testing.</p>
 </div>
 
 <div class="benefit-item">
@@ -166,7 +166,7 @@ We want to provide more value for developers by easing out the development proce
 </svg>
 </div>
 <h4>Automation</h4>
-<p>We provide a fully automated CI/CD pipeline as part of our daily rebase against <a href="https://www.github.com/openbmc/openbmc" target="_blank">upstream</a>. Let's use 21th century development tools to make our life easier.</p>
+<p>We provide a fully automated CI/CD pipeline as part of our weekly rebase against <a href="https://www.github.com/openbmc/openbmc" target="_blank">upstream</a>. Let's use 21th century development tools to make our life easier.</p>
 </div>
 </div>
 
@@ -182,7 +182,7 @@ Our release strategy is designed to serve different use cases within your organi
 <div class="timeline-item">
 <div class="timeline-marker daily"></div>
 <div class="timeline-content">
-<h4>Daily Builds</h4>
+<h4>Weekly Builds</h4>
 <p>Automatic rebases from OpenBMC upstream with basic smoke testing. Perfect for development, early testing, and staying current with the latest features.</p>
 </div>
 </div>
@@ -191,7 +191,7 @@ Our release strategy is designed to serve different use cases within your organi
 <div class="timeline-marker stable"></div>
 <div class="timeline-content">
 <h4>Stable Releases (Every 6 Months)</h4>
-<p>Thoroughly tested releases that undergo extensive validation, security audits, and compatibility testing. Ideal for production deployments.</p>
+<p>Thoroughly tested releases that undergo extensive validation, security audits, and compatibility testing. Ideal to build your solution on top.</p>
 </div>
 </div>
 
@@ -228,7 +228,7 @@ While Canopy provides enterprise stability, we remain deeply connected to the Op
 </p>
 
 <ul>
-<li>Daily upstream tracking ensures we don't drift from the community</li>
+<li>Weekly upstream tracking ensures we don't drift from the community</li>
 <li>Contributions flow back to OpenBMC from our testing and validation work</li>
 <li>Bug fixes and improvements are shared with the broader community</li>
 <li>We participate actively in OpenBMC governance and technical discussions</li>

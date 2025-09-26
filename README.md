@@ -204,4 +204,4 @@ For issues or questions about the website:
 
 ---
 
-**Open Firmware, Open Future** 🌿
+**Open. Stable. Ready.** 🌿

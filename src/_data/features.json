@@ -17,8 +17,8 @@
       "altText": "Transparency icon - Open source and auditable components"
     },
     {
-      "title": "Six month release cycle",
-      "description": "Canopy sticks to a fixed release cycle. No matter what.",
+      "title": "Stability",
+      "description": "Canopy sticks to a fixed release cycle and supports Long-Term Support (LTS) branches. We have defined backporting windows so that you can be sure the code base stays stable and secure.",
       "altText": "Six month release cycle icon - Fixed release schedule"
     },
     {
