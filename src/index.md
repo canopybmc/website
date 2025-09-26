@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: "Open Firmware, Open Future"
+title: "Open. Stable. Ready."
 description: "Canopy is an open-source firmware platform focused on security, transparency, and developer experience."
 ---
 
@@ -20,15 +20,35 @@ description: "Canopy is an open-source firmware platform focused on security, tr
                     {{ hero.secondaryButton.text }}
                 </a>
             </div>
-        </div><div class="hero-visual">
-            <div class="hero-graphic">
-                <div class="philosophy-diagram">
-                    <div class="core {{ hero.core.class }}">{{ hero.core.name }}</div>
-                    <div class="philosophy-layers">
-                        {%- for layer in hero.philosophyLayers -%}
-                        <div class="{{ layer.class }}">{{ layer.name }}</div>
-                        {%- endfor -%}
-                    </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-rings">
+                <div style="position: relative; width: 400px; height: 400px;">
+                    <!-- Ring 4 (outermost) -->
+                    <svg style="position: absolute; top: 0; left: 0;" viewBox="0 0 400 400" width="400" height="400">
+                        <circle cx="200" cy="200" r="140" fill="none" stroke="#6C4AB6" stroke-width="2"
+                                stroke-dasharray="20,10" class="ring ring-4"/>
+                    </svg>
+                    <!-- Ring 3 -->
+                    <svg style="position: absolute; top: 0; left: 0;" viewBox="0 0 400 400" width="400" height="400">
+                        <circle cx="200" cy="200" r="110" fill="none" stroke="#B983FF" stroke-width="2"
+                                stroke-dasharray="15,8" class="ring ring-3"/>
+                    </svg>
+                    <!-- Ring 2 -->
+                    <svg style="position: absolute; top: 0; left: 0;" viewBox="0 0 400 400" width="400" height="400">
+                        <circle cx="200" cy="200" r="80" fill="none" stroke="#6C4AB6" stroke-width="2"
+                                stroke-dasharray="12,6" class="ring ring-2"/>
+                    </svg>
+                    <!-- Ring 1 (innermost) -->
+                    <svg style="position: absolute; top: 0; left: 0;" viewBox="0 0 400 400" width="400" height="400">
+                        <!-- Background fill circle -->
+                        <circle cx="200" cy="200" r="48" fill="#614C9A" stroke="none"/>
+                        <!-- Dashed border circle -->
+                        <circle cx="200" cy="200" r="50" fill="none" stroke="#B983FF" stroke-width="2"
+                                stroke-dasharray="8,4" class="ring ring-1-static"/>
+                        <!-- Favicon in center -->
+                        <image x="175" y="175" width="50" height="50" href="/assets/images/favicon.svg"/>
+                    </svg>
                 </div>
             </div>
         </div>
