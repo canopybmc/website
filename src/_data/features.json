@@ -2,34 +2,34 @@
   "title": "Why Canopy?",
   "items": [
     {
-      "title": "Security",
-      "description": "Built with security-first principles. Verified boot chains, cryptographic signatures, and transparent security practices protect your devices from threats.",
-      "altText": "Security features icon - Built with security-first principles"
-    },
-    {
-      "title": "Developer-first",
-      "description": "Modern tooling, comprehensive documentation, and intuitive APIs make firmware development productive and enjoyable for developers at every level.",
-      "altText": "Developer-first icon - Modern tooling and comprehensive documentation"
-    },
-    {
-      "title": "Transparency",
-      "description": "Every component is open source and auditable. No black boxes, no hidden backdoors. You can verify exactly what's running on your hardware.",
-      "altText": "Transparency icon - Open source and auditable components"
+      "title": "Upstream-First",
+      "description": "Weekly rebases from OpenBMC ensure you get the latest features and improvements while staying closely aligned with the community.",
+      "altText": "Upstream-first icon - Weekly rebases from OpenBMC"
     },
     {
       "title": "Stability",
-      "description": "Canopy sticks to a fixed release cycle and supports Long-Term Support (LTS) branches. We have defined backporting windows so that you can be sure the code base stays stable and secure.",
-      "altText": "Six month release cycle icon - Fixed release schedule"
+      "description": "Thoroughly tested six-month release cycles with comprehensive validation provide enterprise-grade stability for production deployments.",
+      "altText": "Stability icon - Enterprise-grade stability through testing"
     },
     {
-      "title": "Pre-build Binaries",
-      "description": "Canopy provides pre-build binaries for a variety of supported hardware. Easy to get started - flash it and you're ready to go",
-      "altText": "Pre-build binaries icon - Ready-to-flash firmware for supported hardware"
+      "title": "Long-Term Maintenance",
+      "description": "Extended LTS support with security patches, critical bug fixes, and predictable support lifecycles for production environments.",
+      "altText": "Long-term maintenance icon - Extended support and security patches"
     },
     {
-      "title": "Hardware CI",
-      "description": "Canopy does more. We test every commit on real hardware, providing rock-solid stability.",
-      "altText": "Hardware CI icon - Testing every commit on real hardware"
+      "title": "Hardware-Tested",
+      "description": "Every commit is tested on real hardware through automated CI, ensuring rock-solid reliability across supported boards.",
+      "altText": "Hardware testing icon - Automated CI on real hardware"
+    },
+    {
+      "title": "Developer Enablement",
+      "description": "Modern tooling, prebuilt binaries, streamlined configuration, and comprehensive documentation make development productive and enjoyable.",
+      "altText": "Developer enablement icon - Modern tools and documentation"
+    },
+    {
+      "title": "Transparent & Open",
+      "description": "Fully open source with automated CI/CD pipelines, public test results, and complete transparency in development processes.",
+      "altText": "Transparency icon - Open source and auditable"
     }
   ]
 }

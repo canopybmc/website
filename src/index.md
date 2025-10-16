@@ -74,3 +74,79 @@ description: "Canopy is an open-source firmware platform focused on security, tr
         </div>
     </div>
 </section>
+
+<section class="release-strategy">
+    <div class="container">
+        <h2 class="section-title">Release Strategy</h2>
+        <p class="section-subtitle">Rolling releases every 6 months with LTS support every 4th release</p>
+
+        <div class="release-timeline-diagram">
+            <div class="timeline-track">
+                <div class="release-node lts">
+                    <div class="node-circle"></div>
+                    <div class="node-label">2026.02</div>
+                    <div class="node-type">LTS</div>
+                    <div class="lts-branch"></div>
+                </div>
+
+                <div class="release-connector"></div>
+
+                <div class="release-node rolling">
+                    <div class="node-circle"></div>
+                    <div class="node-label">2026.08</div>
+                    <div class="node-type">Rolling</div>
+                </div>
+
+                <div class="release-connector"></div>
+
+                <div class="release-node rolling">
+                    <div class="node-circle"></div>
+                    <div class="node-label">2027.02</div>
+                    <div class="node-type">Rolling</div>
+                </div>
+
+                <div class="release-connector"></div>
+
+                <div class="release-node rolling">
+                    <div class="node-circle"></div>
+                    <div class="node-label">2027.08</div>
+                    <div class="node-type">Rolling</div>
+                </div>
+
+                <div class="release-connector"></div>
+
+                <div class="release-node lts future">
+                    <div class="node-circle"></div>
+                    <div class="node-label">2028.02</div>
+                    <div class="node-type">LTS</div>
+                    <div class="lts-branch"></div>
+                </div>
+
+                <div class="release-connector"></div>
+
+                <div class="release-node rolling future">
+                    <div class="node-circle"></div>
+                    <div class="node-label">2028.08</div>
+                    <div class="node-type">Rolling</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="release-legend">
+            <div class="legend-item">
+                <div class="legend-icon rolling-icon"></div>
+                <div class="legend-text">
+                    <strong>Rolling Release</strong>
+                    <span>6-month support with latest features</span>
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-icon lts-icon"></div>
+                <div class="legend-text">
+                    <strong>LTS Release</strong>
+                    <span>10+ year support with security patches</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

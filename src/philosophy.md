@@ -26,8 +26,8 @@ description: "Understanding Canopy's dual approach to OpenBMC - balancing cuttin
         <header class="page-header">
             <h1>Philosophy & Approach</h1>
             <p class="page-subtitle">
-                Canopy bridges the gap between cutting-edge innovation and enterprise stability, 
-                providing the best of both worlds for OpenBMC deployments.
+                An upstream-first OpenBMC distribution focused on stability, long-term maintenance,
+                testing, and developer enablement.
             </p>
         </header>
 
@@ -35,78 +35,80 @@ description: "Understanding Canopy's dual approach to OpenBMC - balancing cuttin
 <article class="content-section">
 <h2>Our Core Philosophy</h2>
 <p>
-The idea of Canopy is to provide a <strong>stable baseline for OpenBMC</strong>. We believe that enterprise 
-environments need both the latest innovations from the OpenBMC community and the reliability 
-that comes with extensive testing and long-term support.
+Canopy is an <strong>upstream-first OpenBMC distribution</strong> built on four core pillars:
 </p>
 
+<ul>
+<li><strong>Stability</strong> - Enterprise-grade reliability through comprehensive testing and validation</li>
+<li><strong>Long-Term Maintenance</strong> - Extended LTS support with security patches and critical fixes</li>
+<li><strong>Testing</strong> - Hardware CI testing on real boards for every commit</li>
+<li><strong>Developer Enablement</strong> - Modern tooling and streamlined workflows to accelerate development</li>
+</ul>
+
 <p>
-Rather than forcing organizations to choose between innovation and stability, Canopy delivers both 
-through a carefully balanced dual approach to release management and upstream integration.
+By staying closely aligned with OpenBMC upstream while adding robust testing and long-term support,
+Canopy delivers the best of both worlds for production deployments.
 </p>
 </article>
 
 <article class="content-section">
-<h2>The Dual Approach</h2>
+<h2>Upstream-First Approach</h2>
 
 <div class="approach-grid">
-<div class="approach-card stability">
-<div class="approach-icon">
-<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-<path d="12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-</svg>
-</div>
-<h3>Stability & Trust</h3>
-<ul>
-<li><strong>Six-month release cycles</strong> with extensive testing</li>
-<li><strong>Enterprise-grade stability</strong> through comprehensive validation</li>
-<li><strong>Long-term support (LTS)</strong> for production deployments</li>
-<li><strong>Rigorous quality assurance</strong> before each release</li>
-</ul>
-</div>
-
 <div class="approach-card innovation">
 <div class="approach-icon">
 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
 <path d="13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
 </svg>
 </div>
-<h3>Cutting-Edge Innovation</h3>
+<h3>Weekly Upstream Tracking</h3>
 <ul>
-<li><strong>Weekly rebases</strong> to track OpenBMC upstream closely</li>
-<li><strong>Full testing</strong> on weekly builds for rapid feedback</li>
+<li><strong>Weekly rebases</strong> against OpenBMC upstream</li>
+<li><strong>Automated CI/CD</strong> testing on every rebase</li>
 <li><strong>Latest features</strong> from the OpenBMC community</li>
-<li><strong>Continuous integration</strong> with upstream developments</li>
+<li><strong>Active participation</strong> in upstream development</li>
+</ul>
+</div>
+
+<div class="approach-card stability">
+<div class="approach-icon">
+<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+<path d="12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+</svg>
+</div>
+<h3>Production Stability</h3>
+<ul>
+<li><strong>Six-month release cycles</strong> with extensive testing</li>
+<li><strong>Hardware CI testing</strong> on real boards</li>
+<li><strong>Long-term support (LTS)</strong> with security patches</li>
+<li><strong>Predictable maintenance</strong> lifecycles</li>
 </ul>
 </div>
 </div>
             </article>
 
 <article class="content-section">
-<h2>Best of Both Worlds</h2>
-<p>
-This dual approach means Canopy users benefit from:
-</p>
+<h2>The Four Pillars</h2>
 
 <div class="benefits-list">
 <div class="benefit-item">
-<h4>🚀 Innovation Without Risk</h4>
-<p>Access the latest OpenBMC features and improvements without compromising system stability.</p>
+<h4>Stability</h4>
+<p>Enterprise-grade reliability through comprehensive testing, validation, and six-month release cycles that provide predictable deployment schedules.</p>
 </div>
 
 <div class="benefit-item">
-<h4>🛡️ Enterprise Confidence</h4>
-<p>Deploy with confidence knowing each release undergoes extensive testing and validation.</p>
+<h4>Long-Term Maintenance</h4>
+<p>Extended LTS support with security patches, critical bug fixes, and defined maintenance lifecycles for production environments.</p>
 </div>
 
 <div class="benefit-item">
-<h4>🔄 Flexible Deployment Options</h4>
-<p>Choose between stable releases for production or weekly builds for development and testing.</p>
+<h4>Testing</h4>
+<p>Hardware CI testing on real boards for every commit, ensuring rock-solid reliability and catching issues before they reach production.</p>
 </div>
 
 <div class="benefit-item">
-<h4>📈 Long-term Support</h4>
-<p>Benefit from LTS releases that provide security updates and critical fixes over extended periods.</p>
+<h4>Developer Enablement</h4>
+<p>Modern tooling, prebuilt binaries, streamlined configuration, and comprehensive documentation that make development productive and enjoyable.</p>
 </div>
 </div>
 </article>
@@ -166,7 +168,7 @@ We want to provide more value for developers by easing out the development proce
 </svg>
 </div>
 <h4>Automation</h4>
-<p>We provide a fully automated CI/CD pipeline as part of our weekly rebase against <a href="https://www.github.com/openbmc/openbmc" target="_blank">upstream</a>. Let's use 21th century development tools to make our life easier.</p>
+<p>We provide a fully automated CI/CD pipeline as part of our weekly rebase against <a href="https://www.github.com/openbmc/openbmc" target="_blank">upstream</a>. Let's use 21st century development tools to make our life easier.</p>
 </div>
 </div>
 
@@ -222,16 +224,17 @@ This philosophy specifically addresses the needs of enterprise environments that
 </article>
 
 <article class="content-section">
-<h2>Community Connection</h2>
+<h2>Upstream-First Commitment</h2>
 <p>
-While Canopy provides enterprise stability, we remain deeply connected to the OpenBMC community:
+Our upstream-first philosophy ensures Canopy remains closely aligned with the OpenBMC community:
 </p>
 
 <ul>
-<li>Weekly upstream tracking ensures we don't drift from the community</li>
-<li>Contributions flow back to OpenBMC from our testing and validation work</li>
-<li>Bug fixes and improvements are shared with the broader community</li>
-<li>We participate actively in OpenBMC governance and technical discussions</li>
+<li><strong>Weekly rebases</strong> ensure we never drift from upstream</li>
+<li><strong>Contributions flow back</strong> to OpenBMC from our testing and validation work</li>
+<li><strong>Bug fixes and improvements</strong> are shared with the broader community</li>
+<li><strong>Active participation</strong> in OpenBMC development and technical discussions</li>
+<li><strong>Community-driven</strong> development while maintaining production stability</li>
 </ul>
 </article>
         </div>
