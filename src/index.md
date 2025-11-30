@@ -84,7 +84,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
             <div class="timeline-track">
                 <div class="release-node lts">
                     <div class="node-circle"></div>
-                    <div class="node-label">2026.02</div>
+                    <div class="node-label">2026.06</div>
                     <div class="node-type">LTS</div>
                     <div class="lts-branch"></div>
                 </div>
@@ -93,7 +93,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
 
                 <div class="release-node rolling">
                     <div class="node-circle"></div>
-                    <div class="node-label">2026.08</div>
+                    <div class="node-label">2026.12</div>
                     <div class="node-type">Rolling</div>
                 </div>
 
@@ -101,7 +101,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
 
                 <div class="release-node rolling">
                     <div class="node-circle"></div>
-                    <div class="node-label">2027.02</div>
+                    <div class="node-label">2027.06</div>
                     <div class="node-type">Rolling</div>
                 </div>
 
@@ -109,7 +109,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
 
                 <div class="release-node rolling">
                     <div class="node-circle"></div>
-                    <div class="node-label">2027.08</div>
+                    <div class="node-label">2027.12</div>
                     <div class="node-type">Rolling</div>
                 </div>
 
@@ -117,7 +117,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
 
                 <div class="release-node lts future">
                     <div class="node-circle"></div>
-                    <div class="node-label">2028.02</div>
+                    <div class="node-label">2028.06</div>
                     <div class="node-type">LTS</div>
                     <div class="lts-branch"></div>
                 </div>
@@ -126,7 +126,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
 
                 <div class="release-node rolling future">
                     <div class="node-circle"></div>
-                    <div class="node-label">2028.08</div>
+                    <div class="node-label">2028.12</div>
                     <div class="node-type">Rolling</div>
                 </div>
             </div>
