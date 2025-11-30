@@ -10,10 +10,10 @@
     "validation_status": "validated"
   },
   "upcoming": {
-    "version": "2025.14",
+    "version": "2026.06",
     "codename": "Next Release",
     "status": "In Development",
-    "target_date": "2026-Q1",
+    "target_date": "June 2026",
     "description": "Next release with additional hardware support and features"
   },
   "items": [
