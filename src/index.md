@@ -237,3 +237,30 @@ description: "Canopy is an open-source firmware platform focused on security, tr
     </div>
 
 </section>
+
+<section class="newsletter-section">
+    <div class="container">
+        <div class="newsletter-content">
+            <div class="newsletter-text">
+                <h2 class="newsletter-title">Stay Updated</h2>
+                <p class="newsletter-description">
+                    Subscribe to our mailing list to receive updates about new releases,
+                    security patches, and important announcements from the Canopy project.
+                </p>
+            </div>
+            <div class="newsletter-form-wrapper">
+                <a href="https://lists.9elements.com/postorius/lists/canopy.lists.9elements.com/"
+                   class="btn btn-primary btn-newsletter"
+                   target="_blank"
+                   rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    Subscribe to Mailing List
+                </a>
+                <p class="newsletter-note">You'll be redirected to our subscription page</p>
+            </div>
+        </div>
+    </div>
+</section>
