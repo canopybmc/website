@@ -741,6 +741,14 @@ a:hover {
   font-size: 1.5rem;
 }
 
+.feature-card-header {
+  display: contents;
+}
+
+.feature-expand {
+  display: none;
+}
+
 .feature-card p {
   color: #4a5568;
   line-height: 1.6;
@@ -1502,14 +1510,28 @@ a:hover {
     padding-left: 2.5rem;
   }
 
+  .hero {
+    min-height: auto;
+    padding: 3rem 0;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
   }
 
+  .hero-visual {
+    display: none;
+  }
+
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    word-break: break-word;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
   }
 
   .hero-actions {
@@ -1518,38 +1540,136 @@ a:hover {
 
   .features-grid {
     grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 1rem;
   }
 
-  .simple-layers {
-    max-width: 300px;
-    padding: 1rem;
-    gap: 0.75rem;
+  .feature-card {
+    border-radius: 0;
+    box-shadow: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 0;
+    text-align: left;
   }
 
-  .layer-item {
-    padding: 0.75rem 1.5rem;
+  .feature-card:last-child {
+    border-bottom: 1px solid var(--border);
   }
 
-  .core-item {
-    padding: 1rem 1.5rem;
+  .feature-card:hover {
+    transform: none;
+    box-shadow: none;
   }
 
-  .layer-name,
-  .core-name {
+  .feature-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+  }
+
+  .feature-icon {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .feature-icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .feature-card h3 {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    flex: 1;
+  }
+
+  .feature-expand {
+    display: block;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-expand::before,
+  .feature-expand::after {
+    content: "";
+    position: absolute;
+    background: var(--primary);
+    border-radius: 1px;
+    top: 50%;
+    left: 50%;
+  }
+
+  .feature-expand::before {
+    width: 14px;
+    height: 2px;
+    transform: translate(-50%, -50%);
+  }
+
+  .feature-expand::after {
+    width: 2px;
+    height: 14px;
+    transform: translate(-50%, -50%);
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  .feature-card.expanded .feature-expand::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+  }
+
+  .feature-card-body {
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.3s ease,
+      padding 0.3s ease;
+    padding: 0 0.5rem;
+  }
+
+  .feature-card.expanded .feature-card-body {
+    max-height: 200px;
+    padding: 0 0.5rem 1rem;
+  }
+
+  .feature-card p {
     font-size: 0.9rem;
+    margin: 0;
   }
 
-  .core-name {
-    font-size: 1rem;
+  .contribute-grid {
+    gap: 1rem;
   }
 
-  .hero-rings svg {
-    width: 320px;
-    height: 320px;
+  .contribute-card {
+    padding: 1.5rem;
   }
 
-  .center-text {
-    font-size: 20px !important;
+  .contribute-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contribute-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contribute-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .contribute-benefits {
+    display: none;
   }
 
   .content-page {
