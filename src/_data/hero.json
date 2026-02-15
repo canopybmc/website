@@ -1,7 +1,7 @@
 {
   "title": "Open. Stable. Ready.",
   "subtitle": {
-    "text": "An upstream-first OpenBMC distribution focused on <strong>Stability</strong>, <strong>Long-Term Maintenance</strong>, <strong>Testing</strong>, and <strong>Developer Enablement</strong>."
+    "text": "An upstream-first OpenBMC distribution — <strong>developed in Europe, shipped across the world</strong> — focused on <strong>Stability</strong>, <strong>Long-Term Maintenance</strong>, <strong>Testing</strong>, and <strong>Developer Enablement</strong>."
   },
   "primaryButton": {
     "text": "Get Started",
