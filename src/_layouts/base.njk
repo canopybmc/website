@@ -184,6 +184,15 @@
                     setTimeout(function() { toast.style.display = 'none'; }, 300);
                 });
             }
+
+            var featureHeaders = document.querySelectorAll('.feature-card-header');
+            featureHeaders.forEach(function(header) {
+                header.addEventListener('click', function() {
+                    if (window.innerWidth > 768) return;
+                    var card = header.closest('.feature-card');
+                    card.classList.toggle('expanded');
+                });
+            });
         });
     </script>
 </body>

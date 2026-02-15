@@ -113,14 +113,17 @@ description: "Canopy is an open-source firmware platform focused on security, tr
         <div class="features-grid">
             {%- for feature in features.items -%}
             <div class="feature-card">
-                <div class="feature-icon">
-                    {%- assign icon_filename = feature.title | downcase | replace: " ", "-" -%}
-                    <img src="/assets/icons/{{ icon_filename }}.svg" alt="{{ feature.altText }}" width="48" height="48">
+                <div class="feature-card-header">
+                    <div class="feature-icon">
+                        {%- assign icon_filename = feature.title | downcase | replace: " ", "-" -%}
+                        <img src="/assets/icons/{{ icon_filename }}.svg" alt="{{ feature.altText }}" width="48" height="48">
+                    </div>
+                    <h3>{{ feature.title }}</h3>
+                    <span class="feature-expand" aria-hidden="true"></span>
                 </div>
-                <h3>{{ feature.title }}</h3>
-                <p>
-                    {{ feature.description }}
-                </p>
+                <div class="feature-card-body">
+                    <p>{{ feature.description }}</p>
+                </div>
             </div>
             {%- endfor -%}
         </div>
