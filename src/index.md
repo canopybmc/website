@@ -55,6 +55,58 @@ description: "Canopy is an open-source firmware platform focused on security, tr
     </div>
 </section>
 
+{%- if announcements.size > 0 -%}
+
+<section class="announcements-section">
+    <div class="container">
+        {%- for item in announcements -%}
+        <div class="announcement-card">
+            <div class="announcement-logos">
+                <img src="/assets/images/canopy_logo.svg" alt="Canopy" class="announcement-logo" width="120" height="31">
+                <span class="announcement-logos-separator">&times;</span>
+                <img src="/assets/images/hpe_logo.png" alt="Hewlett Packard Enterprise" class="announcement-logo announcement-logo-hpe">
+            </div>
+            <div class="announcement-body">
+                <span class="announcement-tag">{{ item.tag }}</span>
+                <h3 class="announcement-title">{{ item.title }}</h3>
+                <p class="announcement-text">{{ item.summary }}</p>
+                {%- if item.url != "" %}<a href="{{ item.url }}" class="announcement-link">Learn More &rarr;</a>{% endif -%}
+            </div>
+        </div>
+        {%- endfor -%}
+    </div>
+</section>
+{%- endif -%}
+
+{%- assign upcoming = conferences | futureConferences -%}
+{%- if upcoming.size > 0 -%}
+{%- assign next = upcoming | first -%}
+
+<div class="conference-toast" id="conferenceToast">
+    <button class="conference-toast-close" id="conferenceToastClose" aria-label="Dismiss conference banner">&times;</button>
+    <div class="conference-toast-badge">Canopy on Tour</div>
+    <h4 class="conference-toast-name">
+        {%- if next.url %}<a href="{{ next.url }}" target="_blank" rel="noopener">{{ next.name }}</a>{% else %}{{ next.name }}{%- endif -%}
+    </h4>
+    <div class="conference-toast-details">
+        <span class="conference-toast-detail">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            {{ next | confDateDisplay }}
+        </span>
+        <span class="conference-toast-detail">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            {{ next.city }}, {{ next.country }}
+        </span>
+        {%- if next.booth != "" -%}
+        <span class="conference-toast-detail">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            {{ next.booth }}
+        </span>
+        {%- endif -%}
+    </div>
+</div>
+{%- endif -%}
+
 <section class="why-canopy">
     <div class="container">
         <h2 class="section-title">{{ features.title }}</h2>

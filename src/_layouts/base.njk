@@ -175,6 +175,15 @@
                     }
                 });
             }
+
+            var toastClose = document.getElementById('conferenceToastClose');
+            var toast = document.getElementById('conferenceToast');
+            if (toastClose && toast) {
+                toastClose.addEventListener('click', function() {
+                    toast.classList.add('hidden');
+                    setTimeout(function() { toast.style.display = 'none'; }, 300);
+                });
+            }
         });
     </script>
 </body>
