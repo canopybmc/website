@@ -1510,6 +1510,24 @@ a:hover {
     padding-left: 2.5rem;
   }
 
+  .navbar {
+    padding: 0.75rem 0;
+  }
+
+  .nav-brand .logo img {
+    width: 140px;
+    height: auto;
+  }
+
+  .mobile-menu-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hamburger-line {
+    height: 3.5px;
+  }
+
   .hero {
     min-height: auto;
     padding: 3rem 0;
@@ -1674,6 +1692,48 @@ a:hover {
 
   .content-page {
     padding: 2rem 1rem;
+  }
+
+  .content-page table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .content-page table th,
+  .content-page table td {
+    white-space: nowrap;
+  }
+
+  .commit-info code {
+    word-break: break-all;
+  }
+
+  .download-section {
+    grid-template-columns: 1fr;
+  }
+
+  .download-card {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+
+  .board-name {
+    min-width: auto;
+  }
+
+  .features-list {
+    min-width: auto;
+  }
+
+  .boards-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr !important;
   }
 }
 
