@@ -62,9 +62,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
         {%- for item in announcements -%}
         <div class="announcement-card">
             <div class="announcement-logos">
-                <img src="/assets/images/canopy_logo.svg" alt="Canopy" class="announcement-logo" width="120" height="31">
-                <span class="announcement-logos-separator">&times;</span>
-                <img src="/assets/images/hpe_logo.png" alt="Hewlett Packard Enterprise" class="announcement-logo announcement-logo-hpe">
+                <img src="/assets/images/partnership_canopyandHPE.png" alt="Canopy and Hewlett Packard Enterprise" class="announcement-logo-partnership">
             </div>
             <div class="announcement-body">
                 <span class="announcement-tag">{{ item.tag }}</span>
