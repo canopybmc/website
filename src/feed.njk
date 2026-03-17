@@ -1,0 +1,33 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Canopy Blog</title>
+  <subtitle>Engineering insights and project updates from the Canopy open-source BMC firmware project.</subtitle>
+  <link href="https://canopybmc.org/feed.xml" rel="self"/>
+  <link href="https://canopybmc.org/blog/"/>
+  <updated>{% if collections.blog.length > 0 %}{{ collections.blog[0].date | isoDate }}{% else %}{{ "now" | isoDate }}{% endif %}</updated>
+  <id>https://canopybmc.org/blog/</id>
+  <author>
+    <name>Canopy Team</name>
+  </author>
+  {%- for post in collections.blog | reverse %}
+  {%- if loop.index0 < 20 %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="https://canopybmc.org{{ post.url }}"/>
+    <updated>{{ post.date | isoDate }}</updated>
+    <id>https://canopybmc.org{{ post.url }}</id>
+    <summary>{{ post.data.description or (post.content | excerpt) }}</summary>
+    <content type="html">{{ post.content | safe }}</content>
+    {%- if post.data.author and authors[post.data.author] %}
+    <author>
+      <name>{{ authors[post.data.author].name }}</name>
+    </author>
+    {%- endif %}
+  </entry>
+  {%- endif %}
+  {%- endfor %}
+</feed>
