@@ -1,0 +1,60 @@
+---
+layout: base.njk
+---
+
+<section class="blog-listing-section">
+    <div class="blog-listing-container">
+        <div class="blog-listing-header">
+            <h1>Blog</h1>
+            <p class="blog-listing-subtitle">Engineering insights, project updates, and deep dives into open-source BMC firmware.</p>
+            <a href="/feed.xml" class="blog-rss-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+                RSS Feed
+            </a>
+        </div>
+
+        {% set posts = collections.blog %}
+        
+        {% if posts.length === 0 %}
+        <div class="blog-empty">
+            <p>No posts yet. Check back soon!</p>
+        </div>
+        {% else %}
+        <div class="blog-post-list">
+            {% for post in posts %}
+            <article class="blog-post-card">
+                <div class="blog-post-card-content">
+                    {% if post.data.tags %}
+                    <div class="blog-post-tags">
+                        {% for tag in post.data.tags %}{% if tag != "blog" %}
+                        <span class="blog-tag">{{ tag }}</span>
+                        {% endif %}{% endfor %}
+                    </div>
+                    {% endif %}
+                    
+                    <h2 class="blog-post-card-title">
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                    </h2>
+                    
+                    {% if post.data.description %}
+                    <p class="blog-post-card-excerpt">{{ post.data.description }}</p>
+                    {% else %}
+                    <p class="blog-post-card-excerpt">{{ post.content | excerpt }}</p>
+                    {% endif %}
+                    
+                    <div class="blog-post-card-meta">
+                        {% if post.data.author and authors[post.data.author] %}
+                        <span class="blog-post-card-author">{{ authors[post.data.author].name }}</span>
+                        <span class="blog-meta-separator">&middot;</span>
+                        {% endif %}
+                        <time datetime="{{ post.date | isoDate }}">{{ post.date | postDateShort }}</time>
+                        <span class="blog-meta-separator">&middot;</span>
+                        <span>{{ post.content | readingTime }}</span>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
