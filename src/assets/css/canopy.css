@@ -2785,8 +2785,10 @@ h2 {
 }
 
 .blog-post-card {
+  position: relative;
   padding: 2rem 0;
   border-bottom: 1px solid var(--border);
+  cursor: pointer;
 }
 
 .blog-post-card:first-child {
@@ -2809,7 +2811,14 @@ h2 {
   transition: color 0.2s ease;
 }
 
-.blog-post-card-title a:hover {
+.blog-post-card-title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.blog-post-card:hover .blog-post-card-title a {
   color: var(--primary);
 }
 
