@@ -92,21 +92,21 @@ templateEngineOverride: njk,md
 
 ---
 
-## What to Expect
+## What's Included
 
-When releases become available, you'll find:
+Each release includes:
 
-- **Pre-built binaries** for all [supported boards](/boards) (built automatically via GitHub Actions)
+- **Pre-built binaries** for validated boards (built automatically via GitHub Actions)
+- **Source releases** for platforms requiring custom builds (e.g., HPE ProLiant Gen11)
 - **Release notes** with detailed changelog and upgrade instructions
 - **Source code** packages for building from source
-- **Documentation** specific to each release version
 - **Security advisories** and patch information
 
 ---
 
 ## Supported Hardware
 
-Canopy will initially support a variety of server and embedded hardware platforms. See our [supported boards page](/boards) for the complete list of validated devices with feature matrices and validation status.
+Canopy supports server and embedded hardware platforms from multiple vendors. See our [supported boards page](/boards) for the complete list of validated devices with feature matrices and validation status.
 
 ---
 
