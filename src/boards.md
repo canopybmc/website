@@ -77,12 +77,12 @@ Pre-built firmware binaries are automatically generated for all validated boards
         <h4>{{ board.name }}</h4>
         <p class="board-model">{{ board.model }}</p>
         <div class="download-links">
-            {%- if board.model == "evb-ast2500" -%}
-            <a href="https://github.com/canopybmc/openbmc/releases/download/2025.08/flash-evb-ast2500" 
+            {%- if board.model == "hpe-proliant-g11" -%}
+            <a href="https://github.com/canopybmc/canopybmc/releases/tag/2026.04-rc1" 
                class="download-btn"
                target="_blank" 
                rel="noopener">
-                📦 Download BMC Firmware
+                📦 View Source Release (2026.04-rc1)
             </a>
             {%- elsif board.model == "evb-ast2600" -%}
             <a href="https://github.com/canopybmc/openbmc/releases/download/2025.08/flash-evb-ast2600" 
@@ -92,11 +92,11 @@ Pre-built firmware binaries are automatically generated for all validated boards
                 📦 Download BMC Firmware
             </a>
             {%- else -%}
-            <a href="https://github.com/canopybmc/openbmc/releases/latest/download/{{ board.model | downcase | replace: " ", "-" }}-firmware.bin" 
+            <a href="https://github.com/canopybmc/canopybmc/releases/latest" 
                class="download-btn"
                target="_blank" 
                rel="noopener">
-                📦 Download BMC Firmware
+                📦 View Latest Release
             </a>
             {%- endif -%}
         </div>

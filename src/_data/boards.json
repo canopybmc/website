@@ -1,25 +1,15 @@
 {
   "title": "Supported Boards",
   "description": "Hardware platforms validated and supported by Canopy firmware",
-  "github_repo": "https://github.com/canopybmc/openbmc",
+  "github_repo": "https://github.com/canopybmc/canopybmc",
   "boards": [
     {
-      "name": "ARM Fixed Virtual Platform",
-      "model": "fvp",
-      "vendor": "ARM",
+      "name": "HPE ProLiant DL360 Gen11",
+      "model": "hpe-proliant-g11",
+      "vendor": "HPE",
       "validation": {
-        "commit": "47eebae",
-        "date": "2025-09-09",
-        "status": "deferred"
-      }
-    },
-    {
-      "name": "AST2500 EVB",
-      "model": "evb-ast2500",
-      "vendor": "Aspeed",
-      "validation": {
-        "commit": "47eebae",
-        "date": "2025-09-09",
+        "commit": "469720b",
+        "date": "2026-03-19",
         "status": "validated"
       }
     },
@@ -28,9 +18,19 @@
       "model": "evb-ast2600",
       "vendor": "Aspeed",
       "validation": {
-        "commit": "47eebae",
-        "date": "2025-09-09",
+        "commit": "469720b",
+        "date": "2026-03-19",
         "status": "validated"
+      }
+    },
+    {
+      "name": "ARM Fixed Virtual Platform",
+      "model": "fvp",
+      "vendor": "ARM",
+      "validation": {
+        "commit": "469720b",
+        "date": "2026-03-19",
+        "status": "deferred"
       }
     },
     {
@@ -38,9 +38,9 @@
       "model": "tiogapass",
       "vendor": "Wiwynn",
       "validation": {
-        "commit": "47eebae",
-        "date": "2025-09-09",
-        "status": "failed"
+        "commit": "469720b",
+        "date": "2026-03-19",
+        "status": "deferred"
       }
     }
   ]

@@ -1,12 +1,12 @@
 {
   "current": {
-    "version": "2025.08",
-    "codename": "Pioneer LTS",
-    "status": "LTS Release",
-    "release_date": "2025-09-09",
-    "commit": "47eebae",
-    "github_url": "https://github.com/canopybmc/openbmc/tree/LTS/2025.08",
-    "description": "First LTS release of Canopy with validated hardware support",
+    "version": "2026.04-rc1",
+    "codename": "HPE Gen11 Preview",
+    "status": "Pre-Release",
+    "release_date": "2026-03-19",
+    "commit": "469720b",
+    "github_url": "https://github.com/canopybmc/canopybmc/releases/tag/2026.04-rc1",
+    "description": "Release candidate for HPE ProLiant Gen11 platforms. Source-only release for early adopters and evaluation.",
     "validation_status": "validated"
   },
   "upcoming": {
@@ -14,9 +14,19 @@
     "codename": "Next Release",
     "status": "In Development",
     "target_date": "June 2026",
-    "description": "Next release with additional hardware support and features"
+    "description": "Next release with HPE ProLiant Gen11 support, expanded board validation, and upstream rebase to latest OpenBMC"
   },
   "items": [
+    {
+      "version": "2026.04-rc1",
+      "codename": "HPE Gen11 Preview",
+      "status": "Pre-Release",
+      "release_date": "2026-03-19",
+      "commit": "469720b",
+      "github_url": "https://github.com/canopybmc/canopybmc/releases/tag/2026.04-rc1",
+      "description": "Release candidate for HPE ProLiant Gen11 platforms. Source-only release for early adopters and evaluation.",
+      "validation_status": "validated"
+    },
     {
       "version": "2025.08",
       "codename": "Pioneer LTS",
@@ -24,7 +34,7 @@
       "release_date": "2025-09-09",
       "commit": "47eebae",
       "github_url": "https://github.com/canopybmc/openbmc/tree/LTS/2025.08",
-      "description": "First LTS release of Canopy with validated hardware support",
+      "description": "First LTS release of Canopy with validated hardware support for AST2500 and AST2600 EVBs",
       "validation_status": "validated"
     },
     {
