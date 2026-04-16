@@ -77,22 +77,7 @@ jobs:
           BINARIES: firmware=obmc-phosphor-image-canopy-qemu.static.mtd
 ```
 
-The hardware workflow is more involved. HPE ProLiant Gen11 systems use a GXP SoC with a secure boot chain that requires signed firmware. The build step injects a signing key, and the firmware job concatenates the OpenBMC image with the GXP bootblock to produce a complete 32 MB flash image before uploading to FirmwareCI:
-
-```yaml
-# .github/workflows/build-hpe-proliant-g11.yml
-- name: Prepare flash image
-  run: |
-    cat obmc-phosphor-image-hpe-proliant-g11.static.mtd \
-        9e-gxp-dl360.rom > flash-image-hpe-proliant-g11.rom
-    size=$(stat --printf='%s' flash-image-hpe-proliant-g11.rom)
-    if [ "$size" -ne 33554432 ]; then
-      echo "::error::Flash image size is ${size}, expected 33554432 (32MB)"
-      exit 1
-    fi
-```
-
-The size check is a simple guard — if the flash image is not exactly 32 MB, something went wrong in the build or the bootblock concatenation, and there is no point flashing it onto hardware.
+The hardware workflow is similar but the build is more involved. HPE ProLiant Gen11 systems use a GXP SoC with a secure boot chain that requires signed firmware. The build step injects a signing key and appends the GXP bootblock, producing a complete 32 MB flash image directly. The resulting binary is uploaded to FirmwareCI without any post-build processing.
 
 The hardware pipeline also has a `firmwareci-main` job that only runs on pushes to `main` (not on PRs). This triggers a more comprehensive test suite that includes boot timing regressions, fan control validation, and VUART console verification — tests that take longer and exercise the physical server more aggressively.
 
@@ -102,7 +87,7 @@ The hardware pipeline also has a `firmwareci-main` job that only runs on pushes 
 
 The QEMU DUT starts a `qemu-system-arm` process with an AST2600 EVB, forwards SSH to port 2222 and Redfish to port 2443, waits 100 seconds for boot, then runs the test suite.
 
-The hardware DUT uses `newdutctl` to control a physical HPE DL320 Gen11 in the lab. The test sequence: power off, write the firmware image to a flash emulator connected to the server's SPI bus, power on, wait for the "Phosphor OpenBMC" boot banner on the serial console (10-minute timeout), then run the test suite. This is hardware-in-the-loop testing — the BMC boots real firmware on a real GXP SoC.
+The hardware DUT uses [`dutctl`](https://github.com/BlindspotSoftware/dutctl) to control a physical HPE DL320 Gen11 in the lab. The test sequence: power off, write the firmware image to a flash emulator connected to the server's SPI bus, power on, wait for the "Phosphor OpenBMC" boot banner on the serial console (10-minute timeout), then run the test suite. This is hardware-in-the-loop testing — the BMC boots real firmware on a real GXP SoC.
 
 ## What we test
 
