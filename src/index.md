@@ -216,7 +216,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
                     <span>Stable</span>
                 </div>
                 <ul>
-                    <li><strong>Security and critical fixes only</strong>, backported for 10+ years</li>
+                    <li><strong>Security and critical fixes only</strong>, backported for 5 years</li>
                     <li>No feature churn &mdash; API and behaviour held stable</li>
                 </ul>
                 <div class="channel-for"><strong>For:</strong> fleets that need stability and compliance over new features.</div>
@@ -294,7 +294,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
                 <div class="legend-icon lts-icon"></div>
                 <div class="legend-text">
                     <strong>LTS Release</strong>
-                    <span>10+ year support with security patches</span>
+                    <span>5-year support with security patches</span>
                 </div>
             </div>
         </div>
@@ -305,27 +305,27 @@ description: "Canopy is an open-source firmware platform focused on security, tr
 <section class="lts-migration">
     <div class="container">
         <h2 class="section-title">Supported As Long As You Need</h2>
-        <p class="section-subtitle">A new LTS branch every two years, each maintained for 10+ years &mdash; and we carry the migration between them, so a product never runs out of support.</p>
+        <p class="section-subtitle">A new LTS branch every two years, each maintained for 5 years &mdash; and we carry the migration between them, so a product never runs out of support.</p>
         <div class="lts-path">
             <div class="lts-pill">
                 <strong>LTS 2026.12</strong>
-                <span>10+ years of fixes</span>
+                <span>5 years of fixes</span>
             </div>
             <div class="lts-arrow"><span>migrate on your schedule</span></div>
             <div class="lts-pill future">
                 <strong>LTS 2028.12</strong>
-                <span>10+ years of fixes</span>
+                <span>5 years of fixes</span>
             </div>
             <div class="lts-arrow"><span>migrate on your schedule</span></div>
             <div class="lts-pill future">
                 <strong>LTS 2030.12</strong>
-                <span>10+ years of fixes</span>
+                <span>5 years of fixes</span>
             </div>
         </div>
         <div class="migration-grid">
             <div class="migration-card">
-                <h3>Stay as long as you like</h3>
-                <p>Every LTS branch carries security patches and critical fixes for <strong>10+ years</strong>. You move when your product needs newer functionality &mdash; not because a branch expired.</p>
+                <h3>Five years per branch</h3>
+                <p>Every LTS branch carries security patches and critical fixes for <strong>5 years</strong>, and a new branch appears every two years &mdash; so there is always a maintained branch ahead of the one you are on.</p>
             </div>
             <div class="migration-card">
                 <h3>We carry the migration</h3>
