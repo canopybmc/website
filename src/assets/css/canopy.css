@@ -3700,3 +3700,13 @@ h2 {
     content: "\2193";
   }
 }
+
+.status-pre-release {
+  background: linear-gradient(135deg, var(--secondary), var(--primary));
+  color: var(--white);
+}
+
+.status-lts-release {
+  background: linear-gradient(135deg, var(--primary), #4c3184);
+  color: var(--white);
+}
