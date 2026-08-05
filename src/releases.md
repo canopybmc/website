@@ -23,7 +23,7 @@ templateEngineOverride: njk,md
         <div class="release-meta">
             <span class="release-date">Released: {{ releases.current.release_date }}</span>
             <span class="commit-info">
-                Commit: <a href="https://github.com/canopybmc/openbmc/commit/{{ releases.current.commit }}" target="_blank" rel="noopener">
+                Commit: <a href="{{ releases.current.commit_url }}" target="_blank" rel="noopener">
                     <code>{{ releases.current.commit }}</code>
                 </a>
             </span>
@@ -72,7 +72,7 @@ templateEngineOverride: njk,md
         <div class="release-meta">
             <span class="release-date">Released: {{ release.release_date }}</span>
             <span class="commit-info">
-                Commit: <a href="https://github.com/canopybmc/openbmc/commit/{{ release.commit }}" target="_blank" rel="noopener">
+                Commit: <a href="{{ release.commit_url }}" target="_blank" rel="noopener">
                     <code>{{ release.commit }}</code>
                 </a>
             </span>
@@ -115,6 +115,7 @@ Canopy supports server and embedded hardware platforms from multiple vendors. Se
 Following our **six-month release cycle**, we plan to deliver:
 
 - Regular feature releases every 6 months
+- An LTS release every 2 years, maintained for 5 years
 - Security patches and critical bug fixes as needed
 - Pre-release builds for testing and development
 

@@ -1,28 +1,74 @@
 {
   "current": {
-    "version": "2026.04-rc1",
-    "codename": "HPE Gen11 Preview",
-    "status": "Pre-Release",
-    "release_date": "2026-03-19",
-    "commit": "469720b",
-    "github_url": "https://github.com/canopybmc/canopybmc/releases/tag/2026.04-rc1",
-    "description": "Release candidate for HPE ProLiant Gen11 platforms. Source-only release for early adopters and evaluation.",
+    "version": "2026.04",
+    "codename": "Gen11 Stable",
+    "status": "Stable",
+    "release_date": "2026-04-24",
+    "commit": "a3372a9",
+    "commit_url": "https://github.com/canopybmc/canopybmc/commit/a3372a9",
+    "github_url": "https://github.com/canopybmc/canopybmc/releases/tag/2026.04",
+    "description": "First stable release of Canopy. Focuses on HPE ProLiant Gen11 support, adds the Gen11 CHIF interface, updates the OpenBMC base and fixes the issues found during 2026.04-rc2 testing.",
     "validation_status": "validated"
   },
   "upcoming": {
     "version": "2026.06",
-    "codename": "Next Release",
+    "codename": "Gen11 Update",
     "status": "In Development",
-    "target_date": "June 2026",
-    "description": "Next release with HPE ProLiant Gen11 support, expanded board validation, and upstream rebase to latest OpenBMC"
+    "target_date": "2026 H2",
+    "description": "Next release with further HPE ProLiant Gen11 work and an upstream rebase to a more recent OpenBMC. Release candidates are available; 2026.12 is planned as the next LTS."
   },
   "items": [
+    {
+      "version": "2026.06-rc2",
+      "codename": "Gen11 Update",
+      "status": "Pre-Release",
+      "release_date": "2026-07-31",
+      "commit": "562af32",
+      "commit_url": "https://github.com/canopybmc/canopybmc/commit/562af32",
+      "github_url": "https://github.com/canopybmc/canopybmc/releases/tag/2026.06-rc2",
+      "description": "Second release candidate for 2026.06, adding OpenBMC and HPE ProLiant Gen11 features along with Gen11 bugfixes. Introduces breaking changes for Gen11 platforms: updating from an earlier release requires a full update via the static.mtd.all.tar archive.",
+      "validation_status": "in_progress"
+    },
+    {
+      "version": "2026.06-rc1",
+      "codename": "Gen11 Update",
+      "status": "Pre-Release",
+      "release_date": "2026-07-15",
+      "commit": "5429ef8",
+      "commit_url": "https://github.com/canopybmc/canopybmc/commit/5429ef8",
+      "github_url": "https://github.com/canopybmc/canopybmc/releases/tag/2026.06-rc1",
+      "description": "First release candidate for 2026.06. Introduces breaking changes for HPE ProLiant Gen11 platforms, requiring a full update via the static.mtd.all.tar archive.",
+      "validation_status": "in_progress"
+    },
+    {
+      "version": "2026.04",
+      "codename": "Gen11 Stable",
+      "status": "Stable",
+      "release_date": "2026-04-24",
+      "commit": "a3372a9",
+      "commit_url": "https://github.com/canopybmc/canopybmc/commit/a3372a9",
+      "github_url": "https://github.com/canopybmc/canopybmc/releases/tag/2026.04",
+      "description": "First stable release of Canopy. Focuses on HPE ProLiant Gen11 support, adds the Gen11 CHIF interface, updates the OpenBMC base and fixes the issues found during 2026.04-rc2 testing.",
+      "validation_status": "validated"
+    },
+    {
+      "version": "2026.04-rc2",
+      "codename": "HPE Gen11 Preview",
+      "status": "Pre-Release",
+      "release_date": "2026-04-17",
+      "commit": "0c793cd",
+      "commit_url": "https://github.com/canopybmc/canopybmc/commit/0c793cd",
+      "github_url": "https://github.com/canopybmc/canopybmc/releases/tag/2026.04-rc2",
+      "description": "Second release candidate for the first Canopy release. Addresses the issues found during 2026.04-rc1 testing and updates the OpenBMC base.",
+      "validation_status": "validated"
+    },
     {
       "version": "2026.04-rc1",
       "codename": "HPE Gen11 Preview",
       "status": "Pre-Release",
       "release_date": "2026-03-19",
       "commit": "469720b",
+      "commit_url": "https://github.com/canopybmc/canopybmc/commit/469720b",
       "github_url": "https://github.com/canopybmc/canopybmc/releases/tag/2026.04-rc1",
       "description": "Release candidate for HPE ProLiant Gen11 platforms. Source-only release for early adopters and evaluation.",
       "validation_status": "validated"
@@ -33,8 +79,9 @@
       "status": "LTS Release",
       "release_date": "2025-09-09",
       "commit": "47eebae",
-      "github_url": "https://github.com/canopybmc/openbmc/tree/LTS/2025.08",
-      "description": "First LTS release of Canopy with validated hardware support for AST2500 and AST2600 EVBs",
+      "commit_url": "https://github.com/canopybmc/openbmc/commit/47eebae",
+      "github_url": "https://github.com/canopybmc/openbmc/releases/tag/2025.08",
+      "description": "First LTS release of Canopy with validated hardware support for AST2500 and AST2600 EVBs. Maintained on the LTS/2025.08 branch.",
       "validation_status": "validated"
     },
     {
@@ -43,8 +90,9 @@
       "status": "Beta Release",
       "release_date": "2025-08-01",
       "commit": "74663d9",
+      "commit_url": "https://github.com/canopybmc/openbmc/commit/74663d9",
       "github_url": "https://github.com/canopybmc/openbmc/releases/tag/2025.08-beta1",
-      "description": "First beta release of Canopy with core BMC functionality",
+      "description": "First beta release of Canopy with core BMC functionality. Not yet validated on hardware.",
       "validation_status": "not_validated"
     }
   ]
