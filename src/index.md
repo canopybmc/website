@@ -128,6 +128,103 @@ description: "Canopy is an open-source firmware platform focused on security, tr
     </div>
 </section>
 
+<section class="canopy-layers">
+    <div class="container">
+        <h2 class="section-title">What Canopy Is Made Of</h2>
+        <p class="section-subtitle">Three layers build one curated tree. The community provides the foundation, with platform-specific code on top.</p>
+        <div class="layers-stack">
+            <div class="layer-row vendor">
+                <div class="layer-body">
+                    <h3>Vendor patches</h3>
+                    <p>Customer and OEM-specific code, typically under NDA and not upstreamable. This layer stays in Canopy only.</p>
+                </div>
+                <span class="layer-tag">Private</span>
+            </div>
+            <div class="layer-row inflight">
+                <div class="layer-body">
+                    <h3>In-flight patches</h3>
+                    <p>Open-source changes posted upstream and under review, not yet merged &mdash; SoC silicon-init and board enablement, for example. Pulled forward so features land sooner, and upstreamable over time.</p>
+                </div>
+                <span class="layer-tag">Open source</span>
+            </div>
+            <div class="layer-row upstream">
+                <div class="layer-body">
+                    <h3>Upstream OpenBMC</h3>
+                    <p>Merged, released community code &mdash; <code>bmcweb</code>, <code>phosphor-*</code>, <code>webui-vue</code> and the Yocto layers. The foundation.</p>
+                </div>
+                <span class="layer-tag">Merged</span>
+            </div>
+            <div class="layers-result">
+                <span class="layers-equals">=</span>
+                <div>
+                    <strong>Canopy</strong>
+                    <span>One curated, buildable, hardware-tested tree. Because we develop upstream-first, in-flight work flows down into the base as it merges &mdash; only the private vendor layer stays with us for good.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="release-channels">
+    <div class="container">
+        <h2 class="section-title">Release Channels</h2>
+        <p class="section-subtitle">The same tree, delivered at the balance of freshness and stability your deployment needs.</p>
+        <div class="channels-grid">
+            <div class="channel-card edge">
+                <div class="channel-head">
+                    <h3>Bleeding Edge</h3>
+                    <code>main</code>
+                </div>
+                <p class="channel-tagline">Newest of everything, integrated continuously.</p>
+                <div class="channel-spectrum">
+                    <span>Fresh</span>
+                    <div class="channel-track"><span class="channel-dot" style="left: 12%"></span></div>
+                    <span>Stable</span>
+                </div>
+                <ul>
+                    <li>Tracks upstream <strong>main</strong> with weekly rebases, plus in-flight and vendor patches</li>
+                    <li>Freshest features, least hardening</li>
+                </ul>
+                <div class="channel-for"><strong>For:</strong> active development, early board bring-up and feature preview.</div>
+            </div>
+            <div class="channel-card rolling">
+                <div class="channel-head">
+                    <h3>Rolling Release</h3>
+                    <code>every 6 months</code>
+                </div>
+                <p class="channel-tagline">A stabilised snapshot on a fixed cadence.</p>
+                <div class="channel-spectrum">
+                    <span>Fresh</span>
+                    <div class="channel-track"><span class="channel-dot" style="left: 50%"></span></div>
+                    <span>Stable</span>
+                </div>
+                <ul>
+                    <li>Tagged source with <strong>release notes and a hardware test report</strong></li>
+                    <li>Bug and security fixes between releases</li>
+                </ul>
+                <div class="channel-for"><strong>For:</strong> the standard production cadence.</div>
+            </div>
+            <div class="channel-card lts">
+                <div class="channel-head">
+                    <h3>LTS Release</h3>
+                    <code>every 2 years</code>
+                </div>
+                <p class="channel-tagline">A release promoted to long-term support.</p>
+                <div class="channel-spectrum">
+                    <span>Fresh</span>
+                    <div class="channel-track"><span class="channel-dot" style="left: 88%"></span></div>
+                    <span>Stable</span>
+                </div>
+                <ul>
+                    <li><strong>Security and critical fixes only</strong>, backported for 10+ years</li>
+                    <li>No feature churn &mdash; API and behaviour held stable</li>
+                </ul>
+                <div class="channel-for"><strong>For:</strong> fleets that need stability and compliance over new features.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="release-strategy">
     <div class="container">
         <h2 class="section-title">Release Strategy</h2>
@@ -137,17 +234,9 @@ description: "Canopy is an open-source firmware platform focused on security, tr
             <div class="timeline-track">
                 <div class="release-node lts">
                     <div class="node-circle"></div>
-                    <div class="node-label">2026.06</div>
+                    <div class="node-label">2026.12</div>
                     <div class="node-type">LTS</div>
                     <div class="lts-branch"></div>
-                </div>
-
-                <div class="release-connector"></div>
-
-                <div class="release-node rolling">
-                    <div class="node-circle"></div>
-                    <div class="node-label">2026.12</div>
-                    <div class="node-type">Rolling</div>
                 </div>
 
                 <div class="release-connector"></div>
@@ -168,9 +257,17 @@ description: "Canopy is an open-source firmware platform focused on security, tr
 
                 <div class="release-connector"></div>
 
-                <div class="release-node lts future">
+                <div class="release-node rolling">
                     <div class="node-circle"></div>
                     <div class="node-label">2028.06</div>
+                    <div class="node-type">Rolling</div>
+                </div>
+
+                <div class="release-connector"></div>
+
+                <div class="release-node lts future">
+                    <div class="node-circle"></div>
+                    <div class="node-label">2028.12</div>
                     <div class="node-type">LTS</div>
                     <div class="lts-branch"></div>
                 </div>
@@ -179,7 +276,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
 
                 <div class="release-node rolling future">
                     <div class="node-circle"></div>
-                    <div class="node-label">2028.12</div>
+                    <div class="node-label">2029.06</div>
                     <div class="node-type">Rolling</div>
                 </div>
             </div>
@@ -203,6 +300,47 @@ description: "Canopy is an open-source firmware platform focused on security, tr
         </div>
     </div>
 
+</section>
+
+<section class="lts-migration">
+    <div class="container">
+        <h2 class="section-title">Supported As Long As You Need</h2>
+        <p class="section-subtitle">A new LTS branch every two years, each maintained for 10+ years &mdash; and we carry the migration between them, so a product never runs out of support.</p>
+        <div class="lts-path">
+            <div class="lts-pill">
+                <strong>LTS 2026.12</strong>
+                <span>10+ years of fixes</span>
+            </div>
+            <div class="lts-arrow"><span>migrate on your schedule</span></div>
+            <div class="lts-pill future">
+                <strong>LTS 2028.12</strong>
+                <span>10+ years of fixes</span>
+            </div>
+            <div class="lts-arrow"><span>migrate on your schedule</span></div>
+            <div class="lts-pill future">
+                <strong>LTS 2030.12</strong>
+                <span>10+ years of fixes</span>
+            </div>
+        </div>
+        <div class="migration-grid">
+            <div class="migration-card">
+                <h3>Stay as long as you like</h3>
+                <p>Every LTS branch carries security patches and critical fixes for <strong>10+ years</strong>. You move when your product needs newer functionality &mdash; not because a branch expired.</p>
+            </div>
+            <div class="migration-card">
+                <h3>We carry the migration</h3>
+                <p>When you do move, we rebase the platform onto the new LTS. <strong>Vendor patches are carried forward</strong>, and anything already upstreamed arrives with the new base for free &mdash; so the delta you carry shrinks every cycle.</p>
+            </div>
+            <div class="migration-card">
+                <h3>Proven by regression</h3>
+                <p>The hardware regression suite runs on the new branch before you switch, <strong>proving functional parity on your boards</strong> rather than asserting it.</p>
+            </div>
+            <div class="migration-card">
+                <h3>Never a support cliff</h3>
+                <p>Because LTS branches overlap, there is always a maintained branch to move onto. <strong>Production never runs on an unmaintained tree.</strong></p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="contribute-section">
