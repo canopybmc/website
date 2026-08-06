@@ -132,7 +132,8 @@ description: "Canopy is an open-source firmware platform focused on security, tr
     <div class="container">
         <h2 class="section-title">What Canopy Is Made Of</h2>
         <p class="section-subtitle">Three layers build one curated tree. The community provides the foundation, with platform-specific code on top.</p>
-        <div class="layers-stack">
+        <div class="layers-wrap">
+            <div class="layers-stack">
             <div class="layer-row vendor">
                 <div class="layer-body">
                     <h3>Vendor patches</h3>
@@ -154,14 +155,13 @@ description: "Canopy is an open-source firmware platform focused on security, tr
                 </div>
                 <span class="layer-tag">Merged</span>
             </div>
-            <div class="layers-result">
-                <span class="layers-equals">=</span>
-                <div>
-                    <strong>Canopy</strong>
-                    <span>One curated, buildable, hardware-tested tree. Because we develop upstream-first, in-flight work flows down into the base as it merges &mdash; only the private vendor layer stays with us for good.</span>
-                </div>
+            </div>
+            <div class="layers-brace">
+                <span class="layers-brace-bar"></span>
+                <span class="layers-brace-label">Canopy</span>
             </div>
         </div>
+        <p class="layers-note">One curated, buildable, hardware-tested tree. Because we develop upstream-first, in-flight work flows down into the base as it merges &mdash; only the private vendor layer stays with us for good.</p>
     </div>
 </section>
 
