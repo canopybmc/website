@@ -3741,3 +3741,31 @@ h2 {
   background: linear-gradient(135deg, var(--primary), #4c3184);
   color: var(--white);
 }
+
+.content-page .channels-grid {
+  grid-template-columns: 1fr;
+  max-width: none;
+}
+
+.content-page .lts-path,
+.content-page .migration-grid {
+  max-width: none;
+}
+
+.content-page .lts-path {
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.content-page .lts-pill {
+  width: 100%;
+  max-width: 320px;
+}
+
+.content-page .lts-arrow {
+  min-width: 0;
+}
+
+.content-page .lts-arrow::before {
+  content: "\2193";
+}

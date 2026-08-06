@@ -40,7 +40,7 @@ Canopy is an <strong>upstream-first OpenBMC distribution</strong> built on four 
 
 <ul>
 <li><strong>Stability</strong> - Enterprise-grade reliability through comprehensive testing and validation</li>
-<li><strong>Long-Term Maintenance</strong> - Extended LTS support with security patches and critical fixes</li>
+<li><strong>Long-Term Maintenance</strong> - LTS branches every two years, each maintained for five with security patches and critical fixes</li>
 <li><strong>Testing</strong> - Hardware CI testing on real boards for every commit</li>
 <li><strong>Developer Enablement</strong> - Modern tooling and streamlined workflows to accelerate development</li>
 </ul>
@@ -98,7 +98,7 @@ Canopy delivers the best of both worlds for production deployments.
 
 <div class="benefit-item">
 <h4>Long-Term Maintenance</h4>
-<p>Extended LTS support with security patches, critical bug fixes, and defined maintenance lifecycles for production environments.</p>
+<p>LTS branches every two years, each maintained for five years with security patches, critical bug fixes, and defined maintenance lifecycles for production environments.</p>
 </div>
 
 <div class="benefit-item">
@@ -175,34 +175,104 @@ We want to provide more value for developers by easing out the development proce
 </article>
 
 <article class="content-section">
-<h2>Release Strategy</h2>
+<h2>Release Channels</h2>
 <p>
-Our release strategy is designed to serve different use cases within your organization:
+The same curated tree is delivered through three channels, so each part of your organization can pick
+the balance of freshness and stability it needs:
 </p>
+<div class="channels-grid">
+<div class="channel-card edge">
+<div class="channel-head">
+<h3>Bleeding Edge</h3>
+<code>main</code>
+</div>
+<p class="channel-tagline">Newest of everything, integrated continuously.</p>
+<div class="channel-spectrum">
+<span>Fresh</span>
+<div class="channel-track"><span class="channel-dot" style="left: 12%"></span></div>
+<span>Stable</span>
+</div>
+<ul>
+<li>Tracks upstream <strong>main</strong> with weekly rebases, plus in-flight and vendor patches</li>
+<li>Freshest features, least hardening</li>
+</ul>
+<div class="channel-for"><strong>For:</strong> active development, early board bring-up and feature preview.</div>
+</div>
+<div class="channel-card rolling">
+<div class="channel-head">
+<h3>Rolling Release</h3>
+<code>every 6 months</code>
+</div>
+<p class="channel-tagline">A stabilised snapshot on a fixed cadence.</p>
+<div class="channel-spectrum">
+<span>Fresh</span>
+<div class="channel-track"><span class="channel-dot" style="left: 50%"></span></div>
+<span>Stable</span>
+</div>
+<ul>
+<li>Tagged source with <strong>release notes and a hardware test report</strong></li>
+<li>Bug and security fixes between releases</li>
+</ul>
+<div class="channel-for"><strong>For:</strong> the standard production cadence.</div>
+</div>
+<div class="channel-card lts">
+<div class="channel-head">
+<h3>LTS Release</h3>
+<code>every 2 years</code>
+</div>
+<p class="channel-tagline">A release promoted to long-term support.</p>
+<div class="channel-spectrum">
+<span>Fresh</span>
+<div class="channel-track"><span class="channel-dot" style="left: 88%"></span></div>
+<span>Stable</span>
+</div>
+<ul>
+<li><strong>Security and critical fixes only</strong>, backported for 5 years</li>
+<li>No feature churn &mdash; API and behaviour held stable</li>
+</ul>
+<div class="channel-for"><strong>For:</strong> fleets that need stability and compliance over new features.</div>
+</div>
+</div>
+</article>
 
-<div class="release-timeline">
-<div class="timeline-item">
-<div class="timeline-marker daily"></div>
-<div class="timeline-content">
-<h4>Weekly Builds</h4>
-<p>Automatic rebases from OpenBMC upstream with basic smoke testing. Perfect for development, early testing, and staying current with the latest features.</p>
+<article class="content-section">
+<h2>Long-Term Support and Migration</h2>
+<p>
+A new LTS branch is cut every two years and maintained for five. Migration between branches is part of
+the support model rather than an afterthought, so a product stays supported as long as it needs to be:
+</p>
+<div class="lts-path">
+<div class="lts-pill">
+<strong>LTS 2026.12</strong>
+<span>5 years of fixes</span>
+</div>
+<div class="lts-arrow"><span>migrate on your schedule</span></div>
+<div class="lts-pill future">
+<strong>LTS 2028.12</strong>
+<span>5 years of fixes</span>
+</div>
+<div class="lts-arrow"><span>migrate on your schedule</span></div>
+<div class="lts-pill future">
+<strong>LTS 2030.12</strong>
+<span>5 years of fixes</span>
 </div>
 </div>
-
-<div class="timeline-item">
-<div class="timeline-marker stable"></div>
-<div class="timeline-content">
-<h4>Stable Releases (Every 6 Months)</h4>
-<p>Thoroughly tested releases that undergo extensive validation, security audits, and compatibility testing. Ideal to build your solution on top.</p>
+<div class="migration-grid">
+<div class="migration-card">
+<h3>Five years per branch</h3>
+<p>Every LTS branch carries security patches and critical fixes for <strong>5 years</strong>, and a new branch appears every two years &mdash; so there is always a maintained branch ahead of the one you are on.</p>
 </div>
+<div class="migration-card">
+<h3>We carry the migration</h3>
+<p>When you do move, we rebase the platform onto the new LTS. <strong>Vendor patches are carried forward</strong>, and anything already upstreamed arrives with the new base for free &mdash; so the delta you carry shrinks every cycle.</p>
 </div>
-
-<div class="timeline-item">
-<div class="timeline-marker lts"></div>
-<div class="timeline-content">
-<h4>LTS Support</h4>
-<p>Extended support for stable releases with security patches, critical bug fixes, and enterprise-level support commitments.</p>
+<div class="migration-card">
+<h3>Proven by regression</h3>
+<p>The hardware regression suite runs on the new branch before you switch, <strong>proving functional parity on your boards</strong> rather than asserting it.</p>
 </div>
+<div class="migration-card">
+<h3>Never a support cliff</h3>
+<p>Because LTS branches overlap, there is always a maintained branch to move onto. <strong>Production never runs on an unmaintained tree.</strong></p>
 </div>
 </div>
 </article>
