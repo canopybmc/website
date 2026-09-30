@@ -80,7 +80,7 @@ description: "Canopy is an open-source firmware platform focused on security, tr
     <button class="conference-toast-close" id="conferenceToastClose" aria-label="Dismiss conference banner">&times;</button>
     <div class="conference-toast-badge">Canopy on Tour</div>
     <h4 class="conference-toast-name">
-        Talk to us at <a href="https://www.opencompute.org" target="_blank" rel="noopener">OCP Global</a> and <a href="https://www.hpe.com/discover" target="_blank" rel="noopener">HPE Discover</a>
+        Talk to us at <a href="https://www.opencompute.org/summit/global-summit" target="_blank" rel="noopener">OCP Global</a> and <a href="https://www.hpe.com/discover" target="_blank" rel="noopener">HPE Discover</a>
     </h4>
     <p>Meet the team and explore Canopy for your platform.</p>
 </div>
