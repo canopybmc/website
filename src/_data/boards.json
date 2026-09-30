@@ -1,6 +1,6 @@
 {
   "title": "Supported Boards",
-  "description": "Hardware platforms validated and supported by Canopy firmware",
+  "description": "Hardware platforms supported by Canopy firmware, with release-validation and demonstration status",
   "github_repo": "https://github.com/canopybmc/canopybmc",
   "boards": [
     {
@@ -42,6 +42,24 @@
         "date": "2026-03-19",
         "status": "deferred"
       }
+    },
+    {
+      "name": "ASPEED AST2700 DCSCM",
+      "model": "AST2700 DCSCM",
+      "vendor": "ASPEED",
+      "validation": {
+        "status": "demonstrated"
+      },
+      "coverage": "/blog/canopy-goes-ocp-apac/"
+    },
+    {
+      "name": "Altera OmniMC on Agilex 3",
+      "model": "Agilex 3 reference board",
+      "vendor": "Altera",
+      "validation": {
+        "status": "demonstrated"
+      },
+      "coverage": "/blog/canopy-goes-ocp-apac/"
     }
   ]
 }

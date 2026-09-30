@@ -14,7 +14,7 @@ description: "Hardware platforms validated and supported by Canopy firmware with
 
 ## Supported Hardware Platforms
 
-The following boards are currently supported by Canopy firmware:
+The following platforms have Canopy support. Demonstrated platforms run Canopy in the configurations described in our [hardware demo coverage](/blog/canopy-goes-ocp-apac/); they are not marked as release-validated and do not yet have validated downloads listed here.
 
 <div class="boards-table-wrapper">
     <table class="boards-table">
@@ -31,12 +31,14 @@ The following boards are currently supported by Canopy firmware:
         <tbody>
             {%- for board in boards.boards -%}
             <tr class="board-row">
-                <td class="board-name">{{ board.name }}</td>
+                <td class="board-name">{% if board.coverage %}<a href="{{ board.coverage }}">{{ board.name }}</a>{% else %}{{ board.name }}{% endif %}</td>
                 <td class="board-vendor">{{ board.vendor }}</td>
                 <td class="board-model"><code>{{ board.model }}</code></td>
                 <td class="validation-status">
                     {%- if board.validation.status == "validated" -%}
                     <span class="status-validated">✓ Validated</span>
+                    {%- elsif board.validation.status == "demonstrated" -%}
+                    <span class="status-pending">Demonstrated</span>
                     {%- elsif board.validation.status == "in_progress" -%}
                     <span class="status-in-progress">⏳ In Progress</span>
                     {%- elsif board.validation.status == "not_validated" -%}
@@ -49,14 +51,16 @@ The following boards are currently supported by Canopy firmware:
                     <span class="status-pending">⏸ Pending</span>
                     {%- endif -%}
                 </td>
-                <td class="validation-date">{{ board.validation.date }}</td>
+                <td class="validation-date">{{ board.validation.date | default: "—" }}</td>
                 <td class="commit-info">
+                    {% if board.validation.commit %}
                     <a href="{{ boards.github_repo }}/commit/{{ board.validation.commit }}" 
                        target="_blank" 
                        rel="noopener"
                        class="commit-link">
                         <code>{{ board.validation.commit | slice: 0, 7 }}</code>
                     </a>
+                    {% else %}—{% endif %}
                 </td>
             </tr>
             {%- endfor -%}

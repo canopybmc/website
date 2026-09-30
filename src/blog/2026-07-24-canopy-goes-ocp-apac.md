@@ -22,11 +22,11 @@ The HPS runs **CanopyBMC**, 9elements' stable OpenBMC distribution, while the FP
 
 The name **OmniMC** reflects the intended flexibility of the platform. Depending on the implementation, it can operate as a management controller for:
 
-* Servers and appliances as a conventional BMC
-* Coolant distribution units
-* Power shelves
-* Other specialized infrastructure
-* An entire rack as a rack management controller
+- Servers and appliances as a conventional BMC
+- Coolant distribution units
+- Power shelves
+- Other specialized infrastructure
+- An entire rack as a rack management controller
 
 By combining a Linux-based management stack with adaptable FPGA logic, OmniMC provides a common foundation for both standard platform-management functions and highly specialized control interfaces.
 
